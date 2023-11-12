@@ -110,3 +110,10 @@ Route::get('/user', function(){
 Route::get('/coba', function(){
     return view('pamer.coba');
 });
+
+Route::get('/deskripsimenu',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $deskripsi = " ";
+    return view('deskripsi.home', compact('title','slug','deskripsi'));
+});
