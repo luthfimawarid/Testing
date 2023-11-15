@@ -117,3 +117,10 @@ Route::get('/deskripsimenu',function (){
     $deskripsi = " ";
     return view('deskripsi.home', compact('title','slug','deskripsi'));
 });
+
+Route::get('/rasa',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $deskripsi = " ";
+    return view('menurasa.home', compact('title','slug','rasa'));
+});

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pancong.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>Home</title>
@@ -52,44 +52,16 @@
 <!-- navbar end -->
 
 <!-- header -->
-<div id="carouselExampleCaptions" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/promo-kfc-kombo-jagoan-hemat-sabtu-18-maret-23.jpg" class="d-block w-100" alt="..." height="600px">
-      <div class="carousel-caption d-none d-md-block">
-        <div class="dark-text-emphasis"><h5>First slide label</h5></div>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
+<div class="header-fluid p-0 ">
+    <div class="row no-gutters">
+        <div class="col-md-12 abstract-design">
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="img/pngtree-special-promo-banner-design-for-sale-and-offer-vector-png-image_7121132.png" class="d-block w-100" alt="..."  width="80px" height="700px">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="img/KV_COBAIN_GOSEND_TIKTOK_UACe_1200x628_Tiktok_UACe.png" class="d-block w-100" alt="..." width="80px" height="600px">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <p class="text-over-shapes">Temukan <span>kelembutan</span> dan <span>kelezatan</span> autentik dari <span>kue pancong</span></p>
+    <p class="text-over-shapes1">Aroma dari kue pancong dan kelembutannya mengajak jiwa untuk memulai petualangan rasa dalam setiap suapan</p>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffd700" fill-opacity="0.3" d="M0,160L17.1,181.3C34.3,203,69,245,103,266.7C137.1,288,171,288,206,282.7C240,277,274,267,309,224C342.9,181,377,107,411,74.7C445.7,43,480,53,514,80C548.6,107,583,149,617,160C651.4,171,686,149,720,160C754.3,171,789,213,823,213.3C857.1,213,891,171,926,165.3C960,160,994,192,1029,208C1062.9,224,1097,224,1131,192C1165.7,160,1200,96,1234,64C1268.6,32,1303,32,1337,53.3C1371.4,75,1406,117,1423,138.7L1440,160L1440,0L1422.9,0C1405.7,0,1371,0,1337,0C1302.9,0,1269,0,1234,0C1200,0,1166,0,1131,0C1097.1,0,1063,0,1029,0C994.3,0,960,0,926,0C891.4,0,857,0,823,0C788.6,0,754,0,720,0C685.7,0,651,0,617,0C582.9,0,549,0,514,0C480,0,446,0,411,0C377.1,0,343,0,309,0C274.3,0,240,0,206,0C171.4,0,137,0,103,0C68.6,0,34,0,17,0L0,0Z"></path></svg>
 </div>
+
 <!-- header end -->
 
 <!-- content -->
@@ -112,18 +84,6 @@
 <!-- content end -->
 
 <!-- menu start -->
-<div class="container-fluid p-0">
-    <div class="row no-gutters">
-        <div class="col-md-12 abstract-design">
-            <div class="shape-1 abstract-shape"></div>
-            <div class="shape-2 abstract-shape"></div>
-            <div class="shape-3 abstract-shape"></div>
-            <div class="shape-4 abstract-shape"></div>
-            <div class="shape-5 abstract-shape"></div>
-            <div class="shape-6 abstract-shape"></div>
-        </div>
-    </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

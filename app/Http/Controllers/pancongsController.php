@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-
 use App\Models\pancongs;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class pancongsController extends Controller
 {
@@ -15,6 +14,8 @@ class pancongsController extends Controller
      */
     public function index()
     {
+        // $pancong = DB::table('pancongs')->get();
+        // return view("menu.index", compact('pancong'));
         $pancong = pancongs::all();
         return view("menu.index", compact('pancong'));
     }
