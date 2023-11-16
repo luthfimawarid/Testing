@@ -1,4 +1,5 @@
 <nav class="navbar navbar-expand-lg">
+<link rel="stylesheet" href="css/pancong.css">
 <img src="img/Ellipse 29.png" alt="" width="60px" height="60px" class="ms-5">
     <div class="container-fluid justify-content-between">
         <a class="navbar-brand me-2 fst-italic" href="#">FlavourOfPamer</a>

@@ -1,89 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desain Abstrak dengan Bootstrap</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Gaya khusus untuk desain abstrak */
-        .abstract-design {
-            background: linear-gradient(135deg, #3498db, #e74c3c, #f39c12);
-            height: 400px;
-            position: relative;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Style untuk modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
 
-        .abstract-shape {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.3);
-        }
+    /* Style untuk button di sebelah kanan */
+    .modal-button {
+      float: right;
+    }
 
-        .shape-1 {
-            top: 100px;
-            left: 50px;
-        }
+    /* Style untuk gambar di sebelah kiri */
+    .modal-image {
+      float: left;
+      margin-right: 20px;
+    }
 
-        .shape-2 {
-            top: 250px;
-            left: 300px;
-        }
-
-        .shape-3 {
-            top: 50px;
-            right: 100px;
-        }
-
-        .shape-4 {
-            top: 200px;
-            right: 50px;
-        }
-
-        .shape-5 {
-            bottom: 50px;
-            left: 200px;
-        }
-
-        .shape-6 {
-            bottom: 100px;
-            right: 200px;
-        }
-
-        .text-container {
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .text {
-            color: #fff;
-            font-size: 36px;
-            margin-top: 50px;
-        }
-    </style>
+    /* Style untuk menutup modal */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
 
-<div class="container-fluid p-0">
-    <div class="row no-gutters">
-        <div class="col-md-12 abstract-design">
-            <div class="shape-1 abstract-shape"></div>
-            <div class="shape-2 abstract-shape"></div>
-            <div class="shape-3 abstract-shape"></div>
-            <div class="shape-4 abstract-shape"></div>
-            <div class="shape-5 abstract-shape"></div>
-            <div class="shape-6 abstract-shape"></div>
-            <div class="text-container">
-                <h1 class="text">Desain Abstrak Bootstrap</h1>
-            </div>
-        </div>
-    </div>
+<!-- Tombol untuk membuka modal -->
+<button onclick="openModal()">Buka Modal</button>
+
+<!-- Modal -->
+<div id="myModal" class="modal">
+  <!-- Konten modal -->
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img src="path/to/your/image.jpg" alt="Image" class="modal-image">
+  <button class="modal-button">Tombol di sebelah kanan</button>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Fungsi untuk membuka modal
+  function openModal() {
+    document.getElementById('myModal').style.display = 'block';
+  }
+
+  // Fungsi untuk menutup modal
+  function closeModal() {
+    document.getElementById('myModal').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>

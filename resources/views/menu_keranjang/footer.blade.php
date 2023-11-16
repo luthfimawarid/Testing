@@ -1,3 +1,25 @@
+<!-- <div class="container px-4 text-center">
+  <link rel="stylesheet" href="css/keranjang.css">
+  <div class="row gx-5">
+    <div class="col">
+      <div class="p-3 border bg-light" onclick="changeColor(this)">Kembali</div>
+    </div>
+    <div class="col">
+      <div class="p-3 border bg-light" onclick="changeColor(this)">Pesan Sekarang</div>
+    </div>
+  </div>
+</div>
+<script>
+  function changeColor(element) {
+    // Tambahkan atau hapus kelas 'bg-light-clicked' untuk mengubah warna saat diklik
+    element.classList.toggle('bg-light-clicked');
+  }
+</script> -->
+
+<button class="outline-btn" onclick="changeColor(this)">Kembali</button>
+<button class="outline-btn" onclick="changeColor(this)">Pesan Sekarang</button>
+<script src="js/script.js"></script>
+
 <div class="footer text-center">
   <div class="grid1">
       <div class="row">

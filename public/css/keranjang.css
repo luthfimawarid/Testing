@@ -1,0 +1,15 @@
+.keranjang {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+
+  /* Gaya untuk garis pembatas */
+  .garis-pembatas {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+
+  .bg-light-clicked {
+    background-color: lightblue;
+  }

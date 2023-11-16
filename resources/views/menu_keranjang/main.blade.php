@@ -10,7 +10,6 @@
     <header>
         @include('menu_keranjang.nav')
     </header>
-    @include('menu_keranjang.header')
     <div class="container">
         @yield('content')
     </div>
