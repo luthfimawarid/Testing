@@ -121,6 +121,13 @@ Route::get('/deskripsimenu',function (){
 Route::get('/rasa',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
-    $deskripsi = " ";
-    return view('menurasa.home', compact('title','slug','rasa'));
+    $rasa = " ";
+    return view('rasa.home', compact('title','slug','rasa'));
+});
+
+Route::get('/keranjang',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $keranjang = " ";
+    return view('menu_keranjang.home', compact('title','slug','keranjang'));
 });
