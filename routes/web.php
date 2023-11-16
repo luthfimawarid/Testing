@@ -129,5 +129,16 @@ Route::get('/keranjang',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $keranjang = " ";
+<<<<<<< HEAD
     return view('keranjang.home', compact('title','slug','keranjang'));
+=======
+    return view('menu_keranjang.home', compact('title','slug','keranjang'));
+});
+
+Route::get('/login',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $login = " ";
+    return view('login.home', compact('title','slug','login'));
+>>>>>>> c1eacb7f50015cbfe870b13e80a52afda59f16e0
 });
