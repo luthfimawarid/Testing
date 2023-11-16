@@ -131,3 +131,10 @@ Route::get('/keranjang',function (){
     $keranjang = " ";
     return view('menu_keranjang.home', compact('title','slug','keranjang'));
 });
+
+Route::get('/login',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $login = " ";
+    return view('login.home', compact('title','slug','login'));
+});
