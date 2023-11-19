@@ -5,11 +5,11 @@
 
 <div class="content-container d-grid">
     <div class="row">
-        <div class="text-container">
+        <div class="text-container g-col-4">
             <img src="/img/Group 47.png" alt="" class="mt-5" height="100" width="350">
             <p>Ini adalah contoh teks yang dapat Anda masukkan di sini. Sesuaikan dengan kebutuhan Anda.</p>
         </div>
-        <div class="image">
+        <div class="image g-col-4">
             <img src="https://via.placeholder.com/200" alt="Gambar Contoh">
         </div>
     </div>
