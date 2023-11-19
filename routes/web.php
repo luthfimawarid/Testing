@@ -150,7 +150,7 @@ Route::resource('/registrasi', registrasiController::class);
 Route::get('/registrasi',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
-    $login = " ";
+    $registrasi = " ";
     return view('registrasi.home', compact('title','slug','registrasi'));
 
 });
