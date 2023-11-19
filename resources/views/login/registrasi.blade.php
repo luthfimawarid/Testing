@@ -1,13 +1,14 @@
- @extends('menu_register.main')
+ @extends('login.main')
 @section('title', $title)
 @section('content')
-    <h1>{{ $register }}</h1>
+    <h1>{{ $login }}</h1>
     <link rel="stylesheet" href="css/register.css">
+
 
     <div class="bungkus justify-content-center">
         <div class="card-body">
             <form class="row justify-content-center mt-2">
-                <h3 class="register justify-content-center">Register</h3>
+                <h3 class="registrasi justify-content-center">Registrasi</h3>
                 <div class="col-md-11">
                     <label for="inputusername" class="form-label mt-3">Username</label>
                     <input type="text" class="form-control" id="inputusername">
@@ -29,7 +30,10 @@
                     <input type="email" class="form-control" id="inputEmail">
                 </div>
                 <div class="col-11 text-center">
-                    <button type="submit" class="btn btn-dark m-5">Register</button>
+                    <button type="submit" class="btn btn-dark m-5">Daftar</button>
+                </div>
+                <div class="text-center mt-3">
+                    <p>Sudah punya akun? <a href="/logins">Daftar di sini</a></p>
                 </div>
             </form>
         </div>

@@ -136,14 +136,12 @@ Route::get('/keranjang',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $keranjang = " ";
-<<<<<<< HEAD
+
     return view('keranjang.home', compact('title','slug','keranjang'));
-=======
 
     return view('keranjang.home', compact('title','slug','keranjang'));
 
     return view('menu_keranjang.home', compact('title','slug','keranjang'));
->>>>>>> 8a003783cc5e4ac9f5cf87fe6301350f200058d5
 });
 
 Route::resource('/logins', loginsController::class);
@@ -152,8 +150,7 @@ Route::get('/logins',function (){
     $slug = "home";
     $login = " ";
     return view('login.home', compact('title','slug','login'));
-<<<<<<< HEAD
-=======
+
 
 });
 
@@ -161,8 +158,15 @@ Route::resource('/registrasi', registrasiController::class);
 Route::get('/registrasi',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
-    $registrasi = " ";
-    return view('registrasi.home', compact('title','slug','registrasi'));
+    $login = " ";
+    return view('login.registrasi', compact('title','slug','login'));
 
->>>>>>> 8a003783cc5e4ac9f5cf87fe6301350f200058d5
+});
+
+Route::get('/lupapassword',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $login = " ";
+    return view('login.lupapassword', compact('title','slug','login'));
+
 });
