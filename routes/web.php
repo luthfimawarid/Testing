@@ -105,8 +105,13 @@ Route::resource('/pancongs', pancongsController::class);
 Route::get('deskripsi/{id}', 'deskripsiController@index');
 
 Route::get('/user', function(){
-    return view('pamer.home');
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $home = " ";
+    return view('home.home', compact('title', 'slug', 'home'));
 });
+
+
 Route::get('/coba', function(){
     return view('pamer.coba');
 });
@@ -129,10 +134,7 @@ Route::get('/keranjang',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $keranjang = " ";
-<<<<<<< HEAD
     return view('keranjang.home', compact('title','slug','keranjang'));
-=======
-    return view('menu_keranjang.home', compact('title','slug','keranjang'));
 });
 
 Route::get('/login',function (){
@@ -140,5 +142,4 @@ Route::get('/login',function (){
     $slug = "home";
     $login = " ";
     return view('login.home', compact('title','slug','login'));
->>>>>>> c1eacb7f50015cbfe870b13e80a52afda59f16e0
 });
