@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mhsController;
 use App\Http\Controllers\pancongsController;
 use App\Http\Controllers\MenusContoller;
+use App\Http\Controllers\registrasiController;
+use App\Http\Controllers\loginsController;
 use PhpParser\Node\Stmt\Return_;
 
 Route::get('/mhs/perulangan', [mhsController::class,
@@ -134,12 +136,33 @@ Route::get('/keranjang',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $keranjang = " ";
+<<<<<<< HEAD
     return view('keranjang.home', compact('title','slug','keranjang'));
+=======
+
+    return view('keranjang.home', compact('title','slug','keranjang'));
+
+    return view('menu_keranjang.home', compact('title','slug','keranjang'));
+>>>>>>> 8a003783cc5e4ac9f5cf87fe6301350f200058d5
 });
 
-Route::get('/login',function (){
+Route::resource('/logins', loginsController::class);
+Route::get('/logins',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $login = " ";
     return view('login.home', compact('title','slug','login'));
+<<<<<<< HEAD
+=======
+
+});
+
+Route::resource('/registrasi', registrasiController::class);
+Route::get('/registrasi',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $login = " ";
+    return view('registrasi.home', compact('title','slug','registrasi'));
+
+>>>>>>> 8a003783cc5e4ac9f5cf87fe6301350f200058d5
 });
