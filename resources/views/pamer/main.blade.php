@@ -13,9 +13,9 @@
     @include('pamer.nav')
 </nav>
 @include('pamer.header')
-<div class="container">
+<main>
     @yield('content')
-</div>
+</main>
 <footer>
     @include('pamer.footer')
 </footer>

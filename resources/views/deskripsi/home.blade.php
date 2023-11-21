@@ -22,5 +22,9 @@
     </div>
   </div>
 </div>
+<div class="bungkus4">
+  <a href="/user" class="back">Kembali</a>
+  <a href="/menu1" class="pesan">Pesan Sekarang</a>
+</div>
 <script src="js/script.js"></script>
 @endsection

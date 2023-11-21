@@ -1,0 +1,369 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+    /* box-sizing: border-box; */
+}
+
+.navbar {
+    background-color: rgb(251, 224, 105);
+    position: fixed;
+    z-index: 2; /* Nilai z-index lebih tinggi dari elemen shape */
+    width: 100%;
+    font-weight: 600;
+}
+
+.header-fluid {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    background-color: rgb(255, 239, 132);
+    height: 725px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 35%; /* Adjust this value to move the content higher */
+    left: 2.5%; /* Adjust this value to move the content horizontally */
+    z-index: 1;
+}
+
+
+.header-content img {
+    height: auto;
+    margin-left: 5rem;
+}
+
+.header-text {
+    flex: 1;
+    text-align: right;
+    font-size: 2.5rem;
+    margin-right: 5rem;
+}
+
+.text-over-shapes1{
+    flex: 1;
+    text-align: right;
+    font-size: 1rem;
+}
+
+.header-text a{
+    padding: 5px 15px;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.header-text a:hover{
+    color: blanchedalmond;
+}
+
+.text-over-shapes span {
+    font-weight: bold;
+}
+/* header end */
+
+/* konten */
+.img-container{
+    position: relative;
+    text-align: center;
+}
+
+.img{
+    height: 100px;
+    width: 350px;
+    left: 0;
+}
+
+.text1{
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    transform: translate(-50% -50%);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.bungkus1{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+}
+
+.menu{
+    margin-top: 5rem;
+    background-color: rgb(251, 224, 105);
+    border-radius: 15px;
+    box-shadow: 0 1px 5px 0.5px rgb(110, 110, 110);
+}
+
+.menu img{
+    align-items: center;
+    width: 14rem;
+    border-radius: 15px 15px 0px 0px;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.menubody{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nama{
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-top: 0.5rem; 
+    margin-bottom: 0;
+}
+
+.harga{
+    margin-top: 0;
+    font-weight: 350;
+    font-style: oblique;
+    margin-bottom: 0.5rem;
+}
+
+.read{
+    margin-top: 1rem;
+    background-color:rgb(255, 244, 176) ;
+    text-decoration: none;
+    width: 100px;
+    color: #000;
+    border-radius: 15px 15px 15px 15px;
+    height: 30px;
+    box-shadow: 0 0 5px 0.5px rgb(142, 142, 142);
+    font-weight: 200;
+    font-style: italic;
+    margin-left: 4.5rem;
+}
+
+.read:hover{
+    color: #000;
+}
+/* 
+.utama{
+    background-color: #fff4aa;
+    width: 100%;
+
+    max-width: 100%;
+
+} */
+.bungkus2{
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff4aa;
+    width: 100%;
+    /* background-color:rgb(255, 240, 127); */
+    /* opacity: 30%; */
+}
+
+.menu2{
+    /* margin-top: 5rem; */
+    background-color:rgb(251, 224, 105);
+    border-radius: 15px;
+    box-shadow: 0 1px 5px 0.5px rgb(110, 110, 110);
+}
+
+.menu2 img{
+    align-items: center;
+    width: 14rem;
+    border-radius: 15px 15px 0px 0px;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.menubody2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nama2{
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-top: 0.5rem; 
+    margin-bottom: 0;
+}
+
+.harga2{
+    margin-top: 0;
+    font-weight: 350;
+    font-style: oblique;
+    margin-bottom: 0.5rem;
+}
+
+.read2{
+    margin-top: 1rem;
+    background-color:rgb(255, 244, 176) ;
+    text-decoration: none;
+    width: 100px;
+    color: #000;
+    border-radius: 15px 15px 15px 15px;
+    height: 30px;
+    box-shadow: 0 0 5px 0.5px rgb(142, 142, 142);
+    font-weight: 200;
+    font-style: italic;
+    margin-left: 4.5rem;
+}
+
+.read2:hover{
+    color: #000;
+}
+
+.bungkus3{
+    display: flex;
+    justify-content: space-around;
+    /* margin-bottom: 5rem; */
+}
+
+.menu3{
+    margin-top: 5rem;
+    background-color: rgb(251, 224, 105);
+    border-radius: 15px;
+    box-shadow: 0 1px 5px 0.5px rgb(110, 110, 110);
+}
+
+.menu3 img{
+    align-items: center;
+    width: 14rem;
+    border-radius: 15px 15px 0px 0px;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.menubody3{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.nama3{
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin-top: 0.5rem; 
+    margin-bottom: 0;
+}
+
+.harga3{
+    margin-top: 0;
+    font-weight: 350;
+    font-style: oblique;
+    margin-bottom: 0.5rem;
+}
+
+.read3{
+    margin-top: 1rem;
+    background-color:rgb(255, 244, 176) ;
+    text-decoration: none;
+    width: 100px;
+    color: #000;
+    border-radius: 15px 15px 15px 15px;
+    height: 30px;
+    box-shadow: 0 0 5px 0.5px rgb(142, 142, 142);
+    font-weight: 200;
+    font-style: italic;
+    margin-left: 4.5rem;
+}
+
+.read3:hover{
+    color: #000;
+}
+
+.bungkus4{
+    margin-top: 10rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.back{
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px 0.5px rgb(142, 142, 142);
+    color: black;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding-top: 0.5rem;
+    font-size: 1.3rem;
+    border-radius: 15px;
+}
+
+.back:hover{
+    color: #000;
+}
+
+.pesan{
+    background-color: whitesmoke;
+    box-shadow: 0 0 5px 0.5px rgb(142, 142, 142);
+    color: black;
+    text-decoration: none;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    padding-top: 0.6rem;
+    font-size: 1rem;
+    border-radius: 15px;
+}
+
+.pesan:hover{
+    color: rgb(255, 240, 140);
+}
+/* konten end*/
+
+
+
+
+
+/* footer */
+footer{
+    margin-top: 10rem;
+    flex-direction: column;
+}
+
+.grid1{
+    height: 15rem;
+    background-color: rgb(255, 239, 132);
+
+}
+
+.a h3{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+.a a {
+    display: block;
+    margin-bottom: 10px; /* Sesuaikan dengan kebutuhan jarak yang diinginkan */
+    color: #000;
+    text-decoration: none;
+    text-align: start;
+    margin-left: 5rem;
+}
+
+.b h3{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.b a{
+    color: #000;
+    font-size: 2.5rem;
+}
+
+.grid2{
+    text-align: left;
+    height: 3rem;
+    padding-left: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color:  rgb(251, 224, 105);
+    font-weight: 600;
+}

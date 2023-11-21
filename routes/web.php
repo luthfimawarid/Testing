@@ -125,44 +125,49 @@ Route::get('/deskripsimenu',function (){
     return view('deskripsi.home', compact('title','slug','deskripsi'));
 });
 
-Route::get('/rasa',function (){
+Route::get('/menu1',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $rasa = " ";
     return view('rasa.home', compact('title','slug','rasa'));
 });
 
+Route::get('/menu2',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $rasa = " ";
+    return view('rasa.menu2', compact('title','slug','rasa'));
+});
+
+Route::get('/menu3',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $rasa = " ";
+    return view('rasa.menu3', compact('title','slug','rasa'));
+});
+
 Route::get('/keranjang',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $keranjang = " ";
-<<<<<<< HEAD
-    return view('keranjang.home', compact('title','slug','keranjang'));
-=======
-
-    return view('keranjang.home', compact('title','slug','keranjang'));
-
-    return view('menu_keranjang.home', compact('title','slug','keranjang'));
->>>>>>> 8a003783cc5e4ac9f5cf87fe6301350f200058d5
+    return view('menu_keranjang.main', compact('title','slug','keranjang'));
 });
 
 Route::resource('/logins', loginsController::class);
+
 Route::get('/logins',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $login = " ";
     return view('login.home', compact('title','slug','login'));
-<<<<<<< HEAD
-=======
-
 });
 
 Route::resource('/registrasi', registrasiController::class);
+
 Route::get('/registrasi',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $login = " ";
     return view('registrasi.home', compact('title','slug','registrasi'));
 
->>>>>>> 8a003783cc5e4ac9f5cf87fe6301350f200058d5
 });
