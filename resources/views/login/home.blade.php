@@ -1,4 +1,4 @@
-@extends('menu_login.main')
+@extends('login.main')
 @section('title', $title)
 @section('content')
     <h1>{{ $login }}</h1>
@@ -10,21 +10,24 @@
                 <h3 class="login justify-content-center">Login</h3>
                 <div class="col-md-11">
                     <label for="inputusername" class="form-label mt-3">Username</label>
-                    <input type="username" class="form-control" id="inputusername">
+                    <input type="username" class="form-control" id="inputusername" placeholder="masukan username anda">
                 </div>
                 <div class="col-md-11">
                     <label for="inputPassword" class="form-label mt-3">Password</label>
-                    <input type="password" class="form-control" id="inputPassword">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="masukan password anda">
                 </div>
                 <div class="col-11">
                     <label for="inputemail" class="form-label mt-3">Email</label>
                     <input type="text" class="form-control" id="inputemail" placeholder="masukan email anda">
                 </div>
-                <div class="col-11 text-center">
-                    <button type="submit" class="btn btn-dark m-5">Daftar</button>
+                <div class="lupas mt-1">
+                    <p>Lupa password?<a href="/lupapassword">Lupa password</a></p>
                 </div>
-                <div class="text-center mt-3">
-                    <p>Belum punya akun? <a href="{{ url('/register') }}">Daftar di sini</a></p>
+                <div class="col-11 text-center">
+                    <button type="submit" class="btn btn-dark mt-5 mb-2">Daftar</button>
+                </div>
+                <div class="text-center ">
+                    <p>Belum punya akun? <a href="/registrasi">Daftar disini</a></p>
                 </div>
             @endsection
             </form>

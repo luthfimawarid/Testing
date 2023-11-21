@@ -1,0 +1,51 @@
+/* CSS for registration form */
+body {
+    background-image: url('/img/coklat.png');
+    background-size: cover; 
+    background-position: center;
+    /* Menghapus background gradient yang kosong */
+}
+
+.bungkus {
+    margin: 0 auto; /* Menggunakan margin auto untuk memusatkan form */
+    width: 400px;
+    border-radius: 1px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.registrasi {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1.5px solid black;
+    padding-bottom: 7.5px;
+    padding-top: 7.5px;
+}
+
+input[type="username"],
+input[type="password"],
+input[type="nomor_tlp"],
+input[type="alamat"],
+input[type="text"],
+input[type="email"]{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-bottom: 2px solid black;
+  background: transparent;
+}
+
+
+.btn-dark {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: #343a40;
+    border: none;
+    color: white;
+}
+
+.btn-dark:hover {
+    background-color: #1d2124;
+}
