@@ -7,7 +7,7 @@ body {
 }
 
 .bungkus {
-    margin: 0 auto; /* Menggunakan margin auto untuk memusatkan form */
+    margin: 5rem auto; /* Menggunakan margin auto untuk memusatkan form */
     width: 400px;
     border-radius: 1px;
     padding: 20px;

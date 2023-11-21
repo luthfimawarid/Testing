@@ -8,6 +8,7 @@ use App\Http\Controllers\pancongsController;
 use App\Http\Controllers\MenusContoller;
 use App\Http\Controllers\registrasiController;
 use App\Http\Controllers\loginsController;
+use App\Http\Controllers\resetpasswordsController;
 use PhpParser\Node\Stmt\Return_;
 
 Route::get('/mhs/perulangan', [mhsController::class,
@@ -150,16 +151,13 @@ Route::get('/keranjang',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $keranjang = " ";
-<<<<<<< HEAD
     return view('menu_keranjang.main', compact('title','slug','keranjang'));
-=======
 
     return view('keranjang.home', compact('title','slug','keranjang'));
 
     return view('keranjang.home', compact('title','slug','keranjang'));
 
     return view('menu_keranjang.home', compact('title','slug','keranjang'));
->>>>>>> 770c78ee3db052487d21cbaa3a693faeedf477eb
 });
 
 Route::resource('/logins', loginsController::class);
@@ -169,11 +167,6 @@ Route::get('/logins',function (){
     $slug = "home";
     $login = " ";
     return view('login.home', compact('title','slug','login'));
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 770c78ee3db052487d21cbaa3a693faeedf477eb
 });
 
 Route::resource('/registrasi', registrasiController::class);
@@ -186,10 +179,18 @@ Route::get('/registrasi',function (){
 
 });
 
-Route::get('/lupapassword',function (){
+Route::get('/resetpassword',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
     $login = " ";
-    return view('login.lupapassword', compact('title','slug','login'));
+    return view('login.resetpassword', compact('title','slug','login'));
+
+});
+
+Route::get('/history',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $history = " ";
+    return view('hipes.home', compact('title','slug','history'));
 
 });
