@@ -16,10 +16,6 @@
   }
 </script> -->
 
-<button class="outline-btn" onclick="changeColor(this)">Kembali</button>
-<button class="outline-btn" onclick="changeColor(this)">Pesan Sekarang</button>
-<script src="js/script.js"></script>
-
 <div class="footer text-center">
   <div class="grid1">
       <div class="row">

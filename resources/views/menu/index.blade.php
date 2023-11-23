@@ -15,6 +15,7 @@
       <th scope="col">Nama</th>
       <th scope="col">Harga</th>
       <th scope="col">Deskripsi</th>
+      <th scope="col">Photo</th>
       <th scope="col">Edit</th>
       <th scope="col">Hapus</th>
     </tr>
@@ -26,6 +27,7 @@
       <td>{{ $pcg->nama }}</td>
       <td>{{ $pcg->harga }}</td>
       <td>{{ $pcg->deskripsi }}</td>
+      <td><img src="{{ asset($pcg->photo) }}" alt="Photo" style="max-width: 100px;"></td>
       <td><a href="{{ url ('pancongs/'.$pcg->id_menu. '/edit')}}" class="btn btn-primary">EDIT</a></td>
       <td>
         <form action="{{ url ('pancongs/'.$pcg->id_menu)}}" method="post">

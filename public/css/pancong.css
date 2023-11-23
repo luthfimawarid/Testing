@@ -59,6 +59,14 @@ body,html{
     padding-bottom: 20px;
 }
 
+.potop{
+    background-color: rgb(251, 224, 105);
+}
+
+.pobo{
+    background-color: whitesmoke;
+}
+
 .bungkus4{
     margin-top: 10rem;
     display: flex;

@@ -8,30 +8,40 @@
     <title>Tambah data</title>
 </head>
 <body>
-<form action="{{ url('pancongs/'.$pancong->id_menu) }}" method="post">
+<form action="{{ url('pancongs/'.$pancong->id_menu) }}" method="post" enctype="multipart/form-data">
     @method('PATCH')
     @csrf
-    <div class="mb-3">
+    <div class="mb-3 ms-2">
         <label for="exampleinputid_menu" class="form-label">Id_Menu</label>
         <input type="text" class="form-control" id="exampleinputid_menu" name="id_menu" value="{{ $pancong->id_menu }}">
     </div>
-    <div class="mb-3 ms-3">
+    <div class="mb-3 ms-2">
+        <label for="exampleinputphoto" class="form-label">Photo</label>
+        <input type="file" class="form-control" id="exampleinputphoto" name="photo">
+    </div>
+    <div class="mb-3 ms-2">
         <label for="exampleinputnama" class="form-label">Nama</label>
         <input type="text" class="form-control" id="exampleinputnama" name="nama" value="{{ $pancong->nama }}">
     </div>
-    <div class="mb-3 ms-3">
+    <div class="mb-3 ms-2">
         <label for="exampleinputharga" class="form-label">Harga</label>
         <input type="text" class="form-control" id="exampleinputharga" name="harga" value="{{ $pancong->harga }}">
     </div>
-    <div class="mb-3">
+    <div class="mb-3 ms-2">
         <label for="exampleinputdeskripsi" class="form-label">Deskripsi</label>
         <input type="text" class="form-control" id="exampleinputdeskripsi" name="deskripsi" value="{{ $pancong->deskripsi }}">
-    </div> 
+    </div>
+
+    <!-- Tampilkan gambar yang sudah ada -->
+    @if ($pancong->photo)
+        <div class="mb-3 ms-2">
+            <label for="existingPhoto" class="form-label">Photo</label>
+            <img src="{{ asset($pancong->photo) }}" alt="Photo" class="img-thumbnail" style="max-width: 200px;">
+        </div>
+    @endif
+
     <button type="submit" class="btn btn-primary">Update</button>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
-
-
-

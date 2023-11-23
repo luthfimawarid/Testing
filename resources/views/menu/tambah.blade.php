@@ -52,6 +52,10 @@
         <label for="exampleInputPassword1" class="form-label">Id_Menu</label>
         <input type="text" class="form-control" id="exampleInputPassword1" name="id_menu">
     </div>
+    <div class="mb-3 ms-2">
+        <label for="exampleinputphoto" class="form-label">Photo</label>
+        <input type="file" class="form-control" id="exampleinputphoto" name="photo">
+    </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Nama</label>
         <input type="text" class="form-control" id="exampleInputPassword1" name="nama">

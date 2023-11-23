@@ -13,3 +13,8 @@
   .bg-light-clicked {
     background-color: lightblue;
   }
+
+  .menu-keranjang{
+    position: relative;
+    z-index: 999;
+  }
