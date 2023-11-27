@@ -13,12 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('keranjangs', function (Blueprint $table) {
+        Schema::create('resetpasswords', function (Blueprint $table) {
             $table->id();
-            $table->string('photo');
-            $table->string('nama_menu');
-            $table->int('harga');
-            $table->string('deskripsi');
+            $table->string('passwordlama');
+            $table->string('passwordbaru');
+            $table->string('konfirmasipassword');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('keranjangs');
+        Schema::dropIfExists('resetpasswords');
     }
 };

@@ -21,10 +21,10 @@
                     <input type="text" class="form-control" id="inputemail" placeholder="masukan email anda">
                 </div>
                 <div class="lupas mt-1">
-                    <p>Lupa password?<a href="/lupapassword">Lupa password</a></p>
+                    <p>Lupa password?<a href="/resetpassword">Klik disini</a></p>
                 </div>
                 <div class="col-11 text-center">
-                    <button type="submit" class="btn btn-dark mt-5 mb-2">Daftar</button>
+                    <button type="submit" class="btn btn-dark mt-5 mb-2">Masuk</button>
                 </div>
                 <div class="text-center ">
                     <p>Belum punya akun? <a href="/registrasi">Daftar disini</a></p>

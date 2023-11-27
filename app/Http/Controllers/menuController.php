@@ -2,19 +2,27 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\menu;
 use Illuminate\Http\Request;
 
-class MenusController extends Controller
+class menuController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+  // app/Http/Controllers/MenuController.php
+public function index()
     {
-        return view("menus.menu");
+        // Ambil data dari model Menu
+        $menus = Menu::all();
+
+        // Kembalikan tampilan dengan data menu
+        return view('rasa.home', compact('menus'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.

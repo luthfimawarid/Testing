@@ -106,7 +106,7 @@ body{
     font-weight: 600;
     top: 0%;
     left: 0%;
-    transform: translate(200%, 110%);
+    transform: translate(140%, 110%);
     color: black; 
 }
 
@@ -133,7 +133,6 @@ body{
     padding: 20px;
     border-radius: 10px;
     font-weight: 300;
-    margin-right: 50px;
 }
 
 .text-container a{
@@ -150,6 +149,8 @@ body{
 
 /* konten2 start */
 .kategori {
+    display: flex;
+    justify-content: space-between;    
     box-sizing: border-box;
     max-width: 100%; /* Menggunakan max-width daripada width */
     background-color: #fff2ac;
@@ -157,131 +158,19 @@ body{
     height: 500px;
 }
 
-.kategori .kat{
-    margin-left: 42.5%;
-    font-size: 3rem;
-    font-weight: 600;
-    margin-bottom: 5rem;
-}
-
-.bungkus{
-    display: flex;
-    justify-content: space-around;
-}
-
-.card {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    position: relative;
-    width: 225px; 
-    height: 125px;  
-    background-color: #ffe96f;
-    margin-left: 3rem;
-    box-shadow: 0 2px 3px 1.5px#767676;
+.kiri img{
+    margin-left: 50px;
+    width: 500px;
+    height: 500px;
     border-radius: 15px;
-
+    box-shadow: 0 5px 5px 2px rgb(75, 75, 75) ;
 }
 
-.img-box {
-    position: absolute;
-    left: 70px; 
-    top: -50px;
-}
-
-.img-box img{
-    width: 85px;
-    height: 75px;
-    border-radius: 15px;
-}
-
-.teks{
-    font-style: italic;
-    font-size: 1.3rem;
-    margin-top: 35px;
-    padding-top: 20px;
-    border-top: 1px solid black;
-    /* height: 25px; */
-    width: 100%;
-    color: #000;
-    text-align: center;
-}
-
-.card1{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    position: relative;
-    width: 225px; 
-    height: 125px; 
-    background-color: #ffe96f;
-    margin-left: 13rem;
-    box-shadow: 0 2px 3px 1.5px#767676;
-    border-radius: 15px;
-
-}
-
-.img-box1 {
-    position: absolute;
-    left: 70px; 
-    top: -50px;
-}
-
-.img-box1 img{
-    width: 85px;
-    height: 75px;
-    border-radius: 15px;
-}
-
-.teks1{
-    font-style: italic;
-    font-size: 1.3rem;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid black;
-    /* height: 25px; */
-    width: 100%;
-    color: #000;
-    text-align: center;
-}
-
-.card2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    position: relative;
-    width: 225px; 
-    height: 125px; 
-    background-color: #ffe96f;
-    margin-left: 40%;
-    margin-top: 5rem;
-    box-shadow: 0 2px 3px 1.5px#767676;
-    border-radius: 15px;
-}
-
-.img-box2 {
-    position: absolute;
-    left: 70px; 
-    top: -50px;
-}
-
-.img-box2 img{
-    width: 85px;
-    height: 75px;
-    border-radius: 15px;
-}
-
-.teks2{
-    font-style: italic;
-    font-size: 1.3rem;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid black;
-    /* height: 25px; */
-    width: 100%;
-    color: #000;
-    text-align: center;
+.kanan h1{
+    text-align: right;
+    font-weight: 400;
+    margin-right: 50px;
+    border-bottom: 2px solid black;
 }
 
 /* konten2 end */
