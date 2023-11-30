@@ -169,6 +169,8 @@ Route::get('/logins',function (){
 });
 
 Route::resource('/registrasi', registrasiController::class);
+Route::post('/registrasi', [registrasiController::class, 'registrasipost'])->name('registrasi');
+
 
 Route::get('/registrasi',function (){
     $title = "FlavourOfPamer";
@@ -177,6 +179,12 @@ Route::get('/registrasi',function (){
     return view('login.registrasi', compact('title','slug','login'));
 
 });
+Route::get('/register', [registrasiController::class, 'registrasi']);
+Route::post('/register', [registrasiController::class, 'registrasipost'])->name('registrasipost');
+
+Route::get('/logins', [loginsController::class, 'logins']);
+Route::post('/logins', [loginsController::class, 'loginspost'])->name('logins.post');
+
 
 Route::get('/resetpassword',function (){
     $title = "FlavourOfPamer";

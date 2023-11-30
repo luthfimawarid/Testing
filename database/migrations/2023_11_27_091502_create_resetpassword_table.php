@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('resetpasswords', function (Blueprint $table) {
+        Schema::create('resetpassword', function (Blueprint $table) {
             $table->id();
             $table->string('passwordlama');
             $table->string('passwordbaru');
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('resetpasswords');
+        Schema::dropIfExists('resetpassword');
     }
 };
