@@ -1,7 +1,7 @@
 @extends('pamer.main2')
 @section('title', $title)
 @section('stylesheets')
-    <link rel="stylesheet" href="{{asset('css/deskripsi.css')}}">
+    <link rel="stylesheet" href="{{asset('css/pancong.css')}}">
 @endsection
 @section('content')
     <h1>{{ $deskripsi }}</h1>

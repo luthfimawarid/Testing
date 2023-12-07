@@ -6,75 +6,6 @@ body{
     box-sizing: border-box;
 }
 
-.navbar {
-    background-color: rgb(251, 224, 105);
-    position: fixed;
-    z-index: 2; /* Nilai z-index lebih tinggi dari elemen shape */
-    width: 100%;
-    font-weight: 600;
-}
-
-.header-fluid {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: italic;
-    font-weight: 500;
-    background-color: rgb(255, 239, 132);
-    height: 725px;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    max-width: 100%;
-    margin: 0 auto;
-    position: absolute;
-    top: 35%; /* Adjust this value to move the content higher */
-    left: 2.5%; /* Adjust this value to move the content horizontally */
-    z-index: 1;
-}
-
-
-.header-content img {
-    height: auto;
-    margin-left: 5rem;
-}
-
-.header-text {
-    flex: 1;
-    text-align: right;
-    font-size: 2.5rem;
-    margin-right: 5rem;
-}
-
-.text-over-shapes1{
-    flex: 1;
-    text-align: right;
-    font-size: 1rem;
-}
-
-.header-text a{
-    padding: 5px 15px;
-    font-size: 1.5rem;
-    text-decoration: none;
-}
-
-.header-text a:hover{
-    color: blanchedalmond;
-}
-
-.text-over-shapes span {
-    font-weight: bold;
-}
-
-.content-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* gap: 20px; */
-    align-items: center;
-    position: relative;
-}
-
 .circle1, .circle2, .circle3 {
     width: 350px;
     height: 250px;
@@ -149,31 +80,89 @@ body{
 
 /* konten2 start */
 .kategori {
-    display: flex;
-    justify-content: space-between;    
-    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 70% 30%;
     max-width: 100%; /* Menggunakan max-width daripada width */
     background-color: #fff2ac;
     /* opacity: 30%; */
     height: 500px;
 }
 
-.kiri img{
-    margin-left: 50px;
-    width: 500px;
+.kiri h1{
+    margin-left: 2rem;
+    text-align: left;
+    font-weight: 650;
+    margin-right: 50px;
+    border-bottom: 1px solid black;
+}
+
+.kiri p{
+    margin-top: 2.5rem;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    width: 90%;
+    font-weight: 300;
+}
+
+.kiri p span{
+    font-size: 1.5rem;
+    /* margin-left: 2rem; */
+    font-weight: 700;
+}
+
+.kiri h5{
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.kanan img {
+    margin-right: 2rem;
+    width: 400px;
     height: 500px;
     border-radius: 15px;
     box-shadow: 0 5px 5px 2px rgb(75, 75, 75) ;
 }
 
-.kanan h1{
-    text-align: right;
-    font-weight: 400;
-    margin-right: 50px;
-    border-bottom: 2px solid black;
+/* konten2 end */
+
+/* konten3 start */
+.bungkar{
+    display: flex;
+    justify-content: space-around;
 }
 
-/* konten2 end */
+.card img{
+    width: 50%;
+    height: 35%;
+    border-radius: 50%;
+    transform: translatey(-50%);
+}
+
+.card-body{
+    margin-top: -50px;
+    width: 100%;
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+    top: -150px;
+    font-size: .8rem;
+    border-top: 2px solid black;
+    font-weight: 600;
+    font-style: italic;
+    /* margin-top: 2rem; */
+}
+
+.card-text p{
+    font-size: .8rem;
+    text-align: center;
+    font-weight: 200;
+}
+/* konten3 end */
 
 /* .drop {
     position: absolute;

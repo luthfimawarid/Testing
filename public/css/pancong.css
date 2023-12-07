@@ -1,53 +1,5 @@
-body,html{
+body{
     overflow-x: hidden;
-}
-
-
-.navbar {
-    background-color: rgb(251, 224, 105);
-    position: fixed;
-    z-index: 2; /* Nilai z-index lebih tinggi dari elemen shape */
-    width: 100%;
-    font-weight: 600;
-}
-
-.header-fluid {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-style: italic;
-    font-weight: 500;
-}
-
-.text-over-shapes {
-    text-align: center;
-    font-size: 2.5rem;
-    position: absolute;
-    top: 30%; /* Sesuaikan dengan posisi vertikal yang diinginkan */
-    left: 50%; /* Sesuaikan dengan posisi horizontal yang diinginkan */
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Nilai z-index lebih tinggi dari elemen shape */
-}
-
-.text-over-shapes span {
-    color: rgb(255, 224, 83);
-}
-
-.text-over-shapes1 {
-    text-align: center;
-    font-size: 0.75rem;
-    position: absolute;
-    top: 42.5%; /* Sesuaikan dengan posisi vertikal yang diinginkan */
-    left: 50%; /* Sesuaikan dengan posisi horizontal yang diinginkan */
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Nilai z-index lebih tinggi dari elemen shape */
-}
-
-
-.abstract-design {
-    background-color: #ffd900b8;
-    opacity: 30%;
-    height: 400px;
-    position: absolute;
-    z-index: 1; /* Nilai z-index untuk elemen shape */
 }
 
 .deskripsi{
