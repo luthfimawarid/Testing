@@ -15,6 +15,5 @@
     <p class="text-over-shapes1">Aroma dari kue pancong dan kelembutannya mengajak jiwa untuk memulai petualangan rasa dalam setiap suapan</p>
 </div>
 
-
 </body>
 </html>

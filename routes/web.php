@@ -9,6 +9,7 @@ use App\Http\Controllers\MenusContoller;
 use App\Http\Controllers\registrasiController;
 use App\Http\Controllers\loginsController;
 use App\Http\Controllers\resetpasswordsController;
+use App\Http\Controllers\lominController;
 use PhpParser\Node\Stmt\Return_;
 
 Route::get('/mhs/perulangan', [mhsController::class,
@@ -159,7 +160,7 @@ Route::get('/keranjang',function (){
 
 });
 
-Route::resource('/logins', loginsController::class);
+// Route::resource('/logins', loginsController::class);
 
 Route::get('/logins',function (){
     $title = "FlavourOfPamer";
@@ -168,22 +169,23 @@ Route::get('/logins',function (){
     return view('login.home', compact('title','slug','login'));
 });
 
-Route::resource('/registrasi', registrasiController::class);
-Route::post('/registrasi', [registrasiController::class, 'registrasipost'])->name('registrasi');
+// Route::resource('/registrasi', registrasiController::class);
+Route::get('/registrasi', [registrasiController::class, 'registrasi'])->name('registrasi');
+Route::post('/registrasi', [registrasiController::class, 'registrasiPost'])->name('registrasiPost');
 
 
-Route::get('/registrasi',function (){
-    $title = "FlavourOfPamer";
-    $slug = "home";
-    $login = " ";
-    return view('login.registrasi', compact('title','slug','login'));
+// Route::get('/registrasi',function (){
+//     $title = "FlavourOfPamer";
+//     $slug = "home";
+//     $login = " ";
+//     return view('login.registrasi', compact('title','slug','login'));
 
-});
-Route::get('/register', [registrasiController::class, 'registrasi']);
-Route::post('/register', [registrasiController::class, 'registrasipost'])->name('registrasipost');
+// });
+// Route::get('/register', [registrasiController::class, 'registrasi']);
+// Route::post('/register', [registrasiController::class, 'registrasipost'])->name('registrasipost');
 
-Route::get('/logins', [loginsController::class, 'logins']);
-Route::post('/logins', [loginsController::class, 'loginspost'])->name('logins.post');
+Route::get('/logins', [registrasiController::class, 'logins']);
+Route::post('/logins', [registrasiController::class, 'loginspost'])->name('logins.post');
 
 
 Route::get('/resetpassword',function (){
@@ -206,4 +208,11 @@ Route::get('/about', function(){
     $slug = "home";
     $about = " ";
     return view('about.about', compact('title', 'slug', 'about'));
+});
+
+Route::get('/struk', function(){
+    $title = "FlavourOfPamer";
+    $slug = "struk";
+    $struk = " ";
+    return view('keranjang.struk', compact('title', 'slug', 'struk'));
 });
