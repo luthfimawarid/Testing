@@ -1,5 +1,8 @@
-@extends('menucustomer.main')
+@extends('pamer.main')
 @section('title', $title)
+@section('stylesheets')
+    <link rel="stylesheet" href="{{asset('css/menu.css')}}">
+@endsection
 @section('content')
     <h1>{{ $rasa }}</h1>
 <div class="utama">

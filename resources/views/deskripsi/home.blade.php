@@ -1,5 +1,8 @@
-@extends('deskripsimenu.main')
+@extends('pamer.main2')
 @section('title', $title)
+@section('stylesheets')
+    <link rel="stylesheet" href="{{asset('css/deskripsi.css')}}">
+@endsection
 @section('content')
     <h1>{{ $deskripsi }}</h1>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 

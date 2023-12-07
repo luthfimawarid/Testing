@@ -1,5 +1,8 @@
-@extends('history.history')
+@extends('pamer.main2')
 @section('title', $title)
+@section('stylesheets')
+    <link rel="stylesheet" href="{{asset('css/history.css')}}">
+@endsection
 @section('content')
     <h1>{{ $history }}</h1>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 

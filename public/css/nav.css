@@ -1,0 +1,7 @@
+.navbar {
+    background-color: rgb(251, 224, 105);
+    position: fixed;
+    z-index: 2; /* Nilai z-index lebih tinggi dari elemen shape */
+    width: 100%;
+    font-weight: 600;
+}
