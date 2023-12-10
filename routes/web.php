@@ -216,3 +216,11 @@ Route::get('/struk', function(){
     $struk = " ";
     return view('keranjang.struk', compact('title', 'slug', 'struk'));
 });
+
+
+Route::get('/dashboard', function(){
+    $title = "FlavourOfPamer";
+    $slug = "dashboard";
+    $dashboard = " ";
+    return view('admin.isi.dashboard', compact('title', 'slug', 'dashboard'));
+});
