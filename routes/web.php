@@ -110,6 +110,17 @@ Route::resource('/admins', adminController::class);
 Route::resource('/pancongs', pancongsController::class);
 Route::get('deskripsi/{id}', 'deskripsiController@index');
 
+
+
+
+Route::get('/register', [RegisterController::class, 'registerIndex'])->name('registerIndex');
+Route::post('/register', [RegisterController::class, 'registerPost'])->name('registerPost');
+Route::get('/login', [RegisterController::class, 'loginIndex'])->name('loginIndex');
+Route::get('/lomin', [RegisterController::class, 'lominIndex'])->name('lominIndex');
+Route::post('/login', [RegisterController::class, 'loginPost'])->name('loginPost');
+Route::post('/lomin', [RegisterController::class, 'lominPost'])->name('lominPost');
+
+
 Route::get('/user', function(){
     $title = "FlavourOfPamer";
     $slug = "home";
@@ -189,9 +200,9 @@ Route::get('/keranjang',function (){
 // Route::get('/logins', [registrasiController::class, 'logins']);
 // Route::post('/logins', [registrasiController::class, 'loginspost'])->name('logins.post');
 
-Route::get('/login',[LoginController::class, 'index']);
-Route::get('/register',[RegisterController::class, 'store']);
-Route::post('/register',[RegisterController::class, 'store']);
+// Route::get('/login',[LoginController::class, 'index']);
+// Route::get('/register',[RegisterController::class, 'store']);
+// Route::post('/register',[RegisterController::class, 'store']);
 
 Route::get('/resetpassword',function (){
     $title = "FlavourOfPamer";
