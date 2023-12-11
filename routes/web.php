@@ -229,3 +229,10 @@ Route::get('/dashboard', function(){
     $dashboard = " ";
     return view('admin.isi.dashboard', compact('title', 'slug', 'dashboard'));
 });
+
+Route::get('/checkout', function(){
+    $title = "FlavourOfPamer";
+    $slug = "dashboard";
+    $checkout = " ";
+    return view('checkOut.checkout', compact('title', 'slug', 'checkout'));
+});
