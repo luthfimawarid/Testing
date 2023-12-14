@@ -12,6 +12,7 @@ use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\loginsController;
 use App\Http\Controllers\resetpasswordsController;
 use App\Http\Controllers\lominController;
+use App\Http\Controllers\ProdukController;
 use PhpParser\Node\Stmt\Return_;
 
 Route::get('/mhs/perulangan', [mhsController::class,
@@ -106,6 +107,7 @@ Route::delete('/menu/delete/{id}', [pancongsController::class, 'delete'])->name(
 // });
 
 Route::resource('/admins', adminController::class);
+Route::resource('/order', adminController::class);
 
 Route::resource('/pancongs', pancongsController::class);
 Route::get('deskripsi/{id}', 'deskripsiController@index');
@@ -219,6 +221,13 @@ Route::get('/history',function (){
     return view('hipes.home', compact('title','slug','history'));
 });
 
+Route::get('/pesanan',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $pesanan = " ";
+    return view('pesanan.home', compact('title','slug','pesanan'));
+});
+
 Route::get('/about', function(){
     $title = "FlavourOfPamer";
     $slug = "home";
@@ -241,9 +250,18 @@ Route::get('/dashboard', function(){
     return view('admin.isi.dashboard', compact('title', 'slug', 'dashboard'));
 });
 
+// Route::get('/order', function(){
+//     $title = "FlavourOfPamer";
+//     $slug = "order";
+//     $dashboard = " ";
+//     return view('admin.isi.index', compact('title', 'slug', 'dashboard'));
+// });
+
 Route::get('/checkout', function(){
     $title = "FlavourOfPamer";
     $slug = "dashboard";
     $checkout = " ";
     return view('checkOut.checkout', compact('title', 'slug', 'checkout'));
 });
+
+Route::get('/tambahProduk', [ProdukController::class, 'index'])->name('index');

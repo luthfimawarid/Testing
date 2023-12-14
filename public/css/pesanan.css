@@ -1,15 +1,10 @@
 body{
+    background: linear-gradient(90deg, rgb(220, 220, 220) ,whitesmoke);
     overflow-x: hidden;
 }
 
-.history{
+.pesanan{
     margin: 7rem auto;
     width: 60rem;
     padding: 0.5rem 1.2rem;
 }
-
-
-/* 
-.price{
-    margin-top: 7rem;
-} */

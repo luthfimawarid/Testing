@@ -1,12 +1,12 @@
 @extends('pamer.main2')
 @section('title', $title)
 @section('stylesheets')
-    <link rel="stylesheet" href="{{asset('css/history.css')}}">
+    <link rel="stylesheet" href="{{asset('css/pesanan.css')}}">
 @endsection
 @section('content')
-    <h1>{{ $history }}</h1>
+    <h1>{{ $pesanan }}</h1>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
-    <div class="history shadow rounded" style="background-color: rgb(255, 239, 120)">
+    <div class="pesanan shadow rounded" style="background-color: rgb(255, 239, 120)">
       <div class="row rounded" style="background-color: rgb(255, 228, 91);">
           <div class="col-md-2 p-3">
               <img src="/img/menu.png" alt="" width="100%" height="110px">
@@ -19,7 +19,7 @@
           <div class="price col-md-3 mt-3">
               <p>Harga :<b>20.000 x 2</b></p>
               <p>Total :<b> 40.000</b></p>
-              <p><b><i>Pesanan selesai dibuat</i></b></p>
+              <p><b><i>Pesanan sedang diproses</i></b></p>
           </div>
       </div>
       <div class="row rounded mt-5" style="background-color: rgb(255, 228, 91);">
@@ -34,7 +34,7 @@
           <div class="price col-md-3 mt-3">
               <p>Harga : <b>12.000 x 1</b></p>
               <p>Total : <b>12.000</b></p>
-              <p><b><i>Pesanan selesai dibuat</i></b></p>
+              <p><b><i>Pesanan sedang diproses</i></b></p>
           </div>
       </div>
       <div class="row rounded mt-5" style="background-color: rgb(255, 228, 91);">
@@ -49,7 +49,7 @@
           <div class="price col-md-3 mt-3">
               <p>Harga : <b>9.000 x 2</b></p>
               <p>Total : <b>18.000</b></p>
-              <p><b><i>Pesanan selesai dibuat</i></b></p>
+              <p><b><i>Pesanan sedang diproses</i></b></p>
           </div>
       </div>
     </div>

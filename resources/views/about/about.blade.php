@@ -69,7 +69,7 @@
         </div>
     </div>
     <div class="card" style="width: 15rem; height: 20rem;">
-        <img src="/img/nina.jpg" class="card-img-top" alt="...">
+        <img src="/img/andin2.jpg" class="card-img-top" alt="...">
         <div class="card-body">
             <p style="font-weight: 600; border-top: 2px solid black; border-bottom:2px solid black; font-style:italic; margin-bottom:2rem;">Andini Aprillian</p>
             <p>andinia92@gmail.com</p>

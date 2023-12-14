@@ -10,18 +10,30 @@
 <body>
 <form action="{{ url('/admins') }}" method="post">
     @csrf
+    {{-- <div class="mb-3">
+        <label for="exampleinputid" class="form-label">Id</label>
+        <input type="text" class="form-control" id="exampleinputid" name="id">
+    </div>  --}}
     <div class="mb-3">
         <label for="exampleinputnama" class="form-label">Username</label>
         <input type="text" class="form-control" id="exampleinputnama" name="nama">
     </div>
     <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="password">
+        <label for="exampleInputpesanan" class="form-label">Pesanan</label>
+        <input type="text" class="form-control" id="exampleInputpesanan" name="pesanan">
     </div>
     <div class="mb-3">
-        <label for="exampleinputid" class="form-label">Id</label>
-        <input type="text" class="form-control" id="exampleinputid" name="id">
+        <label for="exampleinputharga" class="form-label">Harga</label>
+        <input type="text" class="form-control" id="exampleinputharga" name="harga">
     </div> 
+    <div class="mb-3">
+        <label for="exampleinputjumlah" class="form-label">Jumlah</label>
+        <input type="text" class="form-control" id="exampleinputjumlah" name="jumlah">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputtotal" class="form-label">Total</label>
+        <input type="text" class="form-control" id="exampleInputtotal" name="total">
+    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

@@ -1,15 +1,15 @@
-<div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-warning">
+<div class="sidebar border border-right col-md-3 col-lg-2 p-0 bg-warning vh-1000">
     <div class="offcanvas-md offcanvas-end bg-warning" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarMenuLabel">
       <div class="offcanvas-body d-md-flex flex-column p-0 pt-lg-3 overflow-y-auto">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2 text-dark" aria-current="page" href="#">
+            <a class="nav-link d-flex align-items-center gap-2 text-dark" aria-current="page" href="/dashboard">
               <svg class="bi"><use xlink:href="#house-fill"/></svg>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2 text-dark" href="#">
+            <a class="nav-link d-flex align-items-center gap-2 text-dark" href="/order">
               <svg class="bi"><use xlink:href="#file-earmark"/></svg>
               Orders
             </a>

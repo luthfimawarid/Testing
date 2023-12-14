@@ -32,10 +32,10 @@
             <div class="person bi bi-person-circle" id="personIcon">
                 <div class="side">
                     <div class="kiri">
-                        <a href="/registrasi" id="registerLink">Register</a>
+                        <a href="/register" id="registerLink">Register</a>
                     </div>
                     <div class="kanan">
-                        <a href="/logins" id="loginLink">Login</a>
+                        <a href="/login" id="loginLink">Login</a>
                     </div>
                 </div>
             </div>

@@ -15,7 +15,7 @@ class adminController extends Controller
     public function index()
     {
         $admin = admins::all();
-        return view("admin.index", compact('admin'));
+        return view("admin.isi.pesanan.index", compact('admin'));
     }
 
     /**
@@ -26,7 +26,7 @@ class adminController extends Controller
     public function create()
     {
         $admin = new admins();
-        return view('admin.tambah', compact('admin'));
+        return view('admin.isi.pesanan.tambah', compact('admin'));
     }
 
     /**
@@ -38,9 +38,12 @@ class adminController extends Controller
     public function store(Request $request)
     {
         $admin = new admins();
-        $admin->nama = $request->nama;
-        $admin->password = $request->password;
         $admin->id = $request->id;
+        $admin->nama = $request->nama;
+        $admin->pesanan = $request->pesanan;
+        $admin->harga = $request->harga;
+        $admin->jumlah = $request->jumlah;
+        $admin->total = $request->total;
         $admin->save();
 
         return redirect('/admins');
@@ -66,7 +69,7 @@ class adminController extends Controller
     public function edit($id)
     {
         $admin = admins::find($id);
-        return view('admin.edit', compact('admin'));
+        return view('admin.isi.pesanan.edit', compact('admin'));
     }
 
     /**
@@ -79,9 +82,12 @@ class adminController extends Controller
     public function update(Request $request, $id)
     {
         $admin = admins::find($id);
-        $admin->nama = $request->nama;
-        $admin->password = $request->password;
         $admin->id = $request->id;
+        $admin->nama = $request->nama;
+        $admin->pesanan = $request->pesanan;
+        $admin->harga = $request->harga;
+        $admin->jumlah = $request->jumlah;
+        $admin->total = $request->total;
         $admin->save();
 
         return redirect('/admins');

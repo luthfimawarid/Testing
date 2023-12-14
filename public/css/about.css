@@ -135,8 +135,8 @@ body{
 }
 
 .card img{
-    width: 50%;
-    height: 35%;
+    width: 45%;
+    height: 40%;
     border-radius: 50%;
     transform: translatey(-50%);
 }

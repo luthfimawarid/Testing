@@ -22,8 +22,8 @@
                 <div class="col-11 text-center">
                     <button type="submit" class="btn btn-dark mt-5 mb-2">Masuk</button>
                 </div>
-            @endsection
             </form>
         </div>
     </div>
+    @endsection
 

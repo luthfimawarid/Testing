@@ -64,3 +64,8 @@
 .navbar .form-control {
   padding: .75rem 1rem;
 }
+
+.card{
+  margin: 1.5rem;
+  background: linear-gradient(to top,rgb(255, 207, 14),rgb(255, 224, 69));
+}
