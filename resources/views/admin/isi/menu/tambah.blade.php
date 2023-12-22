@@ -8,28 +8,28 @@
     <title>Tambah data</title>
 </head>
 <body>
-<form action="{{ url('/admins') }}" method="post">
+<form action="{{ url('/pancongs') }}" method="post">
     @csrf
     <div class="mb-3">
-        <label for="exampleinputnama" class="form-label">Username</label>
+        <label for="exampleinputnama" class="form-label">Nama</label>
         <input type="text" class="form-control" id="exampleinputnama" name="nama">
     </div>
     <div class="mb-3">
-        <label for="exampleInputpesanan" class="form-label">Pesanan</label>
-        <input type="text" class="form-control" id="exampleInputpesanan" name="pesanan">
+        <label for="exampleInputharga" class="form-label">Harga</label>
+        <input type="text" class="form-control" id="exampleInputharga" name="harga">
     </div>
     <div class="mb-3">
-        <label for="exampleinputharga" class="form-label">Harga</label>
-        <input type="text" class="form-control" id="exampleinputharga" name="harga">
+        <label for="exampleinputdeskripsi" class="form-label">Deskripsi</label>
+        <input type="text" class="form-control" id="exampleinputdeskripsi" name="deskripsi">
     </div> 
     <div class="mb-3">
-        <label for="exampleinputjumlah" class="form-label">Jumlah</label>
-        <input type="text" class="form-control" id="exampleinputjumlah" name="jumlah">
+        <label for="exampleinputfoto" class="form-label">Foto</label>
+        <input type="file" class="form-control" id="exampleinputfoto" name="foto">
     </div>
-    <div class="mb-3">
+    {{-- <div class="mb-3">
         <label for="exampleInputtotal" class="form-label">Total</label>
         <input type="text" class="form-control" id="exampleInputtotal" name="total">
-    </div>
+    </div> --}}
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

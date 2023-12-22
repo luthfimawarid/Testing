@@ -3,27 +3,27 @@
 @section('content')
 
 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom border-dark-subtle">
-    <h1 class="h2">Dashboard</h1> 
+    <h1 class="h2">Welcome !!!</h1> 
 </div>
 
 <div class="d-flex">
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title" style="border-bottom: 2px solid black">Data Harian</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
   </div>
 
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title" style="border-bottom: 2px solid black">Data Mingguan</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
   </div>
   
   <div class="card">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title" style="border-bottom: 2px solid black">Data Bulanan</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     </div>
   </div>

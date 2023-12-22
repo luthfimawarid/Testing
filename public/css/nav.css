@@ -5,6 +5,7 @@
     position: fixed;
     z-index: 5; /* Nilai z-index lebih tinggi dari elemen shape */
     width: 100%;
+    color: black;
     font-weight: 600;
 }
 

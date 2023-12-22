@@ -17,7 +17,7 @@ class pancongsController extends Controller
         // $pancong = DB::table('pancongs')->get();
         // return view("menu.index", compact('pancong'));
         $pancong = pancongs::all();
-        return view("menu.index", compact('pancong'));
+        return view("admin.isi.menu.index", compact('pancong'));
     }
 
     /**
@@ -28,7 +28,7 @@ class pancongsController extends Controller
     public function create()
     {
         $pancong = new pancongs();
-        return view('menu.tambah', compact('pancong'));
+        return view('admin.isi.menu.tambah', compact('pancong'));
     }
 
     /**
@@ -69,7 +69,7 @@ class pancongsController extends Controller
     public function edit($id_menu)
     {
         $pancong = pancongs::find($id_menu);
-        return view('menu.edit', compact('pancong'));
+        return view('admin.isi.menu.edit', compact('pancong'));
     }
 
     /**

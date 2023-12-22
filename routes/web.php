@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\DataMingguanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\pancongssController;
@@ -97,9 +98,9 @@ Route::get('/',function (){
     return view('konten.home', compact('title','slug','konten'));
 });
 
-Route::get('/pancongs', [pancongsController::class, 'index'])->name('pancongs');
-Route::get('/tambah', [pancongsController::class, 'tambah'])->name('tambah');
-Route::delete('/menu/delete/{id}', [pancongsController::class, 'delete'])->name('menu.delete');
+// Route::get('/pancongs', [pancongsController::class, 'index'])->name('pancongs');
+// Route::get('/tambah', [pancongsController::class, 'tambah'])->name('tambah');
+// Route::delete('/menu/delete/{id}', [pancongsController::class, 'delete'])->name('menu.delete');
 
 
 // Route::get('/admins',function (){
@@ -108,6 +109,8 @@ Route::delete('/menu/delete/{id}', [pancongsController::class, 'delete'])->name(
 
 Route::resource('/admins', adminController::class);
 Route::resource('/order', adminController::class);
+Route::resource('/product', pancongsController::class);
+Route::get('/datamingguan', [DataMingguanController::class, 'index'])->name('index');
 
 Route::resource('/pancongs', pancongsController::class);
 Route::get('deskripsi/{id}', 'deskripsiController@index');
@@ -264,4 +267,10 @@ Route::get('/checkout', function(){
     return view('checkOut.checkout', compact('title', 'slug', 'checkout'));
 });
 
+Route::get('/harian', function(){
+    $title = "FlavourOfPamer";
+    $slug = "dashboard";
+    $harian = " ";
+    return view('admin.isi.harian', compact('title', 'slug', 'harian'));
+});
 Route::get('/tambahProduk', [ProdukController::class, 'index'])->name('index');
