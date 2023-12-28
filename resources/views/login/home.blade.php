@@ -7,6 +7,7 @@
     <div class="bungkus justify-content-center">
         <div class="card-body">
             <form action="{{ route('loginIndex')}}" method="POST" class="row justify-content-center mt-2">
+                @csrf
                 <h3 class="login justify-content-center">Login</h3>
                 <div class="col-md-11">
                     <label for="inputusername" class="form-label mt-3">Nama Lengkap</label>

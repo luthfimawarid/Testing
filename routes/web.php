@@ -114,6 +114,7 @@ Route::get('/datamingguan', [DataMingguanController::class, 'index'])->name('ind
 
 Route::resource('/pancongs', pancongsController::class);
 Route::get('deskripsi/{id}', 'deskripsiController@index');
+Route::get('/menu1', [pancongsController::class, 'index']);
 
 
 
@@ -149,12 +150,10 @@ Route::get('/deskripsimenu',function (){
     return view('deskripsi.home', compact('title','slug','deskripsi'));
 });
 
-Route::get('/menu1',function (){
-    $title = "FlavourOfPamer";
-    $slug = "home";
-    $rasa = " ";
-    return view('rasa.home', compact('title','slug','rasa'));
-});
+// Route::get('/menu1',function (){
+    
+//     return view('rasa.home', compact('title','slug','rasa'));
+// });
 
 Route::get('/menu2',function (){
     $title = "FlavourOfPamer";

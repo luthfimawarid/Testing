@@ -21,7 +21,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2 text-dark" href="#">
+            <a class="nav-link d-flex align-items-center gap-2 text-dark" href="/admins">
               <svg class="bi"><use xlink:href="#people"/></svg>
               Customers
             </a>
@@ -48,9 +48,9 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2 text-dark" href="#">
+            <a class="nav-link d-flex align-items-center gap-2 text-dark" href="/datamingguan">
               <svg class="bi"><use xlink:href="#file-earmark-text"/></svg>
-              Last quarter
+              Data Mingguan
             </a>
           </li>
           <li class="nav-item">

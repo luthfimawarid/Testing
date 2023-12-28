@@ -29,16 +29,21 @@
             </ul>
         </div>
         <div class="person-content">
+            @auth
+            <p>{{auth()->user()->name}}</p>
+            @endauth
+            @guest
             <div class="person bi bi-person-circle" id="personIcon">
-                <div class="side">
-                    <div class="kiri">
-                        <a href="/register" id="registerLink">Register</a>
-                    </div>
-                    <div class="kanan">
-                        <a href="/login" id="loginLink">Login</a>
+                    <div class="side">
+                        <div class="kiri">
+                            <a href="/register" id="registerLink">Register</a>
+                        </div>
+                        <div class="kanan">
+                            <a href="/login" id="loginLink">Login</a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endguest
         </div>
     </div>
 </nav>

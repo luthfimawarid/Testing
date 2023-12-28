@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\pancongs;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\DB;
 
 class pancongsController extends Controller
@@ -17,7 +19,10 @@ class pancongsController extends Controller
         // $pancong = DB::table('pancongs')->get();
         // return view("menu.index", compact('pancong'));
         $pancong = pancongs::all();
-        return view("admin.isi.menu.index", compact('pancong'));
+        $title = "FlavourOfPamer";
+        $slug = "home";
+        $rasa = " ";
+        return view("rasa.home", compact('pancong','title','slug','rasa'));
     }
 
     /**

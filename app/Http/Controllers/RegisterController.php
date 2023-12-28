@@ -22,7 +22,7 @@ class RegisterController extends Controller
     $user->nomor_tlp = $request->nomor_tlp;
     $user->alamat = $request->alamat;
     $user->save();
-    return back()->with('success', 'Register Successfully');
+    return redirect('/login')->with('success', 'Register Successfully');
    }
    public function loginIndex()
    {

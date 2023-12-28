@@ -1,4 +1,4 @@
-@extends('menu_keranjang.main')
+@extends('pamer.main2')
 @section('title', $title)
 @section('content')
     <h1>{{ $title }}</h1>
