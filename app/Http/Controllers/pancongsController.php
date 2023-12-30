@@ -22,7 +22,7 @@ class pancongsController extends Controller
         $title = "FlavourOfPamer";
         $slug = "home";
         $rasa = " ";
-        return view("rasa.home", compact('pancong','title','slug','rasa'));
+        return view("admin.isi.menu.index", compact('pancong','title','slug','rasa'));
     }
 
     /**

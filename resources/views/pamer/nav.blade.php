@@ -28,9 +28,20 @@
                 </li>
             </ul>
         </div>
-        <div class="person-content">
+        <div class="person-content d-flex justify-content-between">
             @auth
-            <p>{{auth()->user()->name}}</p>
+            <p class="m-auto me-2">{{auth()->user()->name}}</p>
+            <div class="person bi bi-person-circle" id="personIcon">
+                <div class="side">
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <button type="submit" class="logout">
+                            <i class="bi bi-box-arrow-left"></i>
+                            <p class="out">Logout</p>
+                        </button>
+                    </form>
+                </div>
+            </div>
             @endauth
             @guest
             <div class="person bi bi-person-circle" id="personIcon">
