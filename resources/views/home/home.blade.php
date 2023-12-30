@@ -32,7 +32,6 @@
 <!-- kontent2 start -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffd700" fill-opacity="0.35" d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,176C672,181,768,171,864,160C960,149,1056,139,1152,138.7C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
 <div class="kategori">
-    <p class="kat" name="kategori" >Kategori</p>
     <div class="bungkus">
         <a href="/menu1" class="card">
             <div class="img-box">
@@ -50,15 +49,15 @@
                 <p>Menu 2 Rasa</p>
             </div>
         </a>
+        <a href="/menu3" class="card2">
+            <div class="img-box2">
+                <img src="/img/image 10.png" alt="" width="50px" height="50px">
+            </div>
+            <div class="teks2">
+                <p>Menu 3 Rasa</p>
+            </div>
+        </a>
     </div>
-    <a href="/menu3" class="card2">
-        <div class="img-box2">
-            <img src="/img/image 10.png" alt="" width="50px" height="50px">
-        </div>
-        <div class="teks2">
-            <p>Menu 3 Rasa</p>
-        </div>
-    </a>
 </div>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#ffd700" fill-opacity="0.35" d="M0,96L48,101.3C96,107,192,117,288,133.3C384,149,480,171,576,176C672,181,768,171,864,160C960,149,1056,139,1152,138.7C1248,139,1344,149,1392,154.7L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
 <!-- kontent2 end -->

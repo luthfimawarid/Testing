@@ -70,3 +70,23 @@ cursor: pointer;
     border-radius: 0 0 15px 15px;
     transition: 0.4s;
 }
+
+.logout {
+    display: flex;
+    background-color: rgb(251, 224, 105);
+    color: black;
+    box-shadow: 0 2px 2px 2px black;
+    padding: 2px 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    gap: 5
+    px; 
+}
+
+
+.out{
+    font-size: 1.3rem;
+}
+
+

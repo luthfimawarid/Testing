@@ -9,7 +9,7 @@
       <th scope="col">Nama</th>
       <th scope="col">Harga</th>
       <th scope="col">Deskripsi</th>
-      <th scope="col">Photo</th>
+      <th scope="col">Foto</th>
       <th scope="col">Edit</th>
       <th scope="col">Hapus</th>
     </tr>

@@ -46,6 +46,15 @@ class RegisterController extends Controller
         return back()->with('error', 'Email or Password salah');
    }
 
+   public function logout(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+
+        return redirect('/user');
+    }
+
    public function lominPost(Request $request) {
         $credetials = [
             'email' => $request->email,
