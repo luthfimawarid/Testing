@@ -110,6 +110,8 @@ Route::get('/',function (){
 Route::resource('/admins', adminController::class);
 Route::resource('/order', adminController::class);
 Route::resource('/product', pancongsController::class);
+
+Route::get('/customers', [customerController::class, 'index'])->name('index');
 Route::get('/datamingguan', [DataMingguanController::class, 'index'])->name('index');
 
 Route::resource('/pancongs', pancongsController::class);
@@ -272,4 +274,12 @@ Route::get('/harian', function(){
     $harian = " ";
     return view('admin.isi.harian', compact('title', 'slug', 'harian'));
 });
+
+Route::get('/hipesadmin',function (){
+    $title = "FlavourOfPamer";
+    $slug = "home";
+    $historyAdmin = " ";
+    return view('admin.historyAdmin.home', compact('title','slug','historyAdmin'));
+});
+
 Route::get('/tambahProduk', [ProdukController::class, 'index'])->name('index');
