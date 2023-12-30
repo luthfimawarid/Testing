@@ -109,17 +109,14 @@ Route::get('/',function (){
 
 Route::resource('/admins', adminController::class);
 Route::resource('/order', adminController::class);
-<<<<<<< HEAD
 Route::resource('/product', pancongsController::class);
 
 Route::get('/customers', [customerController::class, 'index'])->name('index');
-=======
 // Route::resource('/product', pancongsController::class);
 
 Route::get('/tambahmenu', [pancongsController::class, 'index'])->name('index');
 
 
->>>>>>> b5387bf8afd72ae4f847820c4da208f76d7c970d
 Route::get('/datamingguan', [DataMingguanController::class, 'index'])->name('index');
 
 Route::resource('/pancongs', pancongsController::class);
