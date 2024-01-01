@@ -8,7 +8,7 @@
     <title>Edit data</title>
 </head>
 <body>
-<form action="{{ url('pancongs2/'.$pancong2->id) }}" method="post">
+<form action="{{ url('pancongs2/'.$pancong2->id) }}" method="post" enctype="multipart/form-data">
     @method('PATCH')
     @csrf
     <div class="mb-3">
@@ -29,7 +29,8 @@
     </div> 
     <div class="mb-3">
         <label for="exampleinputfoto" class="form-label">Foto</label>
-        <input type="file" class="form-control" id="exampleinputfoto" name="foto" value="{{ $pancong2->foto }}">
+        <input type="file" class="form-control" id="exampleinputfoto" name="foto">
+        <img src="{{ asset('img/' . $pancong2->foto) }}" alt="Foto Lama" style="max-width: 100px; margin-top: 10px;">
     </div>
     <button type="submit" class="btn btn-primary">Update</button>
 </form>

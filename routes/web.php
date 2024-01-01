@@ -7,8 +7,10 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\pancongssController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mhsController;
+use App\Http\Controllers\customerController;
 use App\Http\Controllers\pancongsController;
 use App\Http\Controllers\pancongs2Controller;
+use App\Http\Controllers\pancongs3Controller;
 use App\Http\Controllers\MenusContoller;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\loginsController;
@@ -115,19 +117,27 @@ Route::resource('/product', pancongsController::class);
 Route::get('/customers', [customerController::class, 'index'])->name('index');
 // Route::resource('/product', pancongsController::class);
 
-Route::get('/tambahmenu', [pancongsController::class, 'indexTabel'])->name('indexTabel');
-Route::get('/tambahmenu2', [pancongs2Controller::class, 'indexTabel'])->name('indexTabel');
-
-
-Route::get('/datamingguan', [DataMingguanController::class, 'index'])->name('index');
-
 Route::resource('/pancongs', pancongsController::class);
-Route::get('deskripsi/{id}', 'deskripsiController@index');
+Route::get('pancongs/{id}', [pancongsController::class, 'show']);
 Route::get('/menu1', [pancongsController::class,'index']);
 
 Route::resource('/pancongs2', pancongs2Controller::class);
 Route::get('deskripsi/{id}', 'deskripsiController@index');
 Route::get('/menu2', [pancongs2Controller::class,'index']);
+
+Route::resource('/pancongs3', pancongs3Controller::class);
+Route::get('deskripsi/{id}', 'deskripsiController@index');
+Route::get('/menu3', [pancongs3Controller::class,'index']);
+
+
+Route::get('/tambahmenu', [pancongsController::class, 'indexTabel'])->name('indexTabel');
+Route::get('/tambahmenu2', [pancongs2Controller::class, 'indexTabel'])->name('indexTabel');
+Route::get('/tambahmenu3', [pancongs3Controller::class, 'indexTabel'])->name('indexTabel');
+
+
+Route::get('/datamingguan', [DataMingguanController::class, 'index'])->name('index');
+
+
 
 
 
@@ -175,12 +185,12 @@ Route::get('/deskripsimenu',function (){
 //     return view('rasa.menu2', compact('title','slug','rasa'));
 // });
 
-Route::get('/menu3',function (){
-    $title = "FlavourOfPamer";
-    $slug = "home";
-    $rasa = " ";
-    return view('rasa.menu3', compact('title','slug','rasa'));
-});
+// Route::get('/menu3',function (){
+//     $title = "FlavourOfPamer";
+//     $slug = "home";
+//     $rasa = " ";
+//     return view('rasa.menu3', compact('title','slug','rasa'));
+// });
 
 Route::get('/keranjang',function (){
     $title = "FlavourOfPamer";

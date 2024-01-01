@@ -27,6 +27,12 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-2 text-dark" aria-current="page" href="/tambahmenu3">
+              <svg class="bi"><use xlink:href="#cart"/></svg>
+              Products 3
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link d-flex align-items-center gap-2 text-dark" href="#">
               <svg class="bi"><use xlink:href="#people"/></svg>
               Customers
