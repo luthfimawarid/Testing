@@ -23,9 +23,6 @@
                       <li><a class="dropdown-item" href="/menu3">Menu 3 Rasa</a></li>
                     </ul>
                   </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="chat">Chat</a>
-                </li>
             </ul>
         </div>
         <div class="person-content d-flex justify-content-between">

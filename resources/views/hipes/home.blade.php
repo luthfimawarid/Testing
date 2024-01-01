@@ -1,4 +1,4 @@
-@extends('pamer.main2')
+@extends('pamer.main1')
 @section('title', $title)
 @section('stylesheets')
     <link rel="stylesheet" href="{{asset('css/history.css')}}">

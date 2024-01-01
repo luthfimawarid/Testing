@@ -22,7 +22,13 @@ class pancongsController extends Controller
         $title = "FlavourOfPamer";
         $slug = "home";
         $rasa = " ";
-        return view("admin.isi.menu.index", compact('pancong','title','slug','rasa'));
+        return view("rasa.home", compact('pancong','title','slug','rasa'));
+    }
+
+    public function indexTabel()
+    {
+        $pancong = pancongs::all();
+        return view('admin.isi.menu.index', compact('pancong'));
     }
 
     /**
@@ -51,7 +57,7 @@ class pancongsController extends Controller
         $pancong->deskripsi = $request->deskripsi;
         $pancong->save();
 
-        return redirect('/pancongs');
+        return redirect('/tambahmenu');
     }
 
     /**
@@ -92,7 +98,7 @@ class pancongsController extends Controller
         $pancong->deskripsi = $request->deskripsi;
         $pancong->save();
 
-        return redirect('/pancongs');
+        return redirect('/tambahmenu');
     }
 
     /**
@@ -103,9 +109,16 @@ class pancongsController extends Controller
      */
     public function destroy($id_menu)
     {
+        // Cek apakah data dengan ID yang diberikan ada di database
         $pancong = pancongs::find($id_menu);
-        $pancong->delete();
 
-        return redirect('/pancongs');
+     if ($pancong) {
+        // Jika data ditemukan, hapus
+        $pancong->delete();
+        return redirect('/tambahmenu')->with('success', 'Data berhasil dihapus');
+     } else {
+        // Jika data tidak ditemukan, berikan pesan atau lakukan penanganan yang sesuai
+        return redirect('/tambahmenu')->with('error', 'Data tidak ditemukan');
+     }
     }
 }
