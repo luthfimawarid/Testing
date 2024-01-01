@@ -280,7 +280,7 @@ Route::get('/harian', function(){
     return view('admin.isi.harian', compact('title', 'slug', 'harian'));
 });
 
-<<<<<<< HEAD
+
 Route::get('/hipesadmin',function (){
     $title = "FlavourOfPamer";
     $slug = "home";
@@ -289,5 +289,4 @@ Route::get('/hipesadmin',function (){
 });
 
 Route::get('/tambahProduk', [ProdukController::class, 'index'])->name('index');
-=======
->>>>>>> b5387bf8afd72ae4f847820c4da208f76d7c970d
+
