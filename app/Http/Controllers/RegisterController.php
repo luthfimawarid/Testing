@@ -25,9 +25,11 @@ class RegisterController extends Controller
     return redirect('/login')->with('success', 'Register Successfully');
    }
    public function loginIndex()
-   {
-        return view('login.home');
-   }
+{
+    $users = User::all(); // Mengambil semua data pengguna
+    return view('login.home', compact('users')); // Meneruskan data pengguna ke tampilan
+}
+
    public function lominIndex()
    {
         return view('login.lomin');
@@ -51,8 +53,9 @@ class RegisterController extends Controller
         Auth::logout();
 
         $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-        return redirect('/user');
+        return view('home.home');
     }
 
    public function lominPost(Request $request) {

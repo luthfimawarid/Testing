@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\customer;
+use App\Models\User;
 
 class customerController extends Controller
 {
@@ -13,8 +15,13 @@ class customerController extends Controller
      */
     public function index()
     {
-        $customer = customer::all();
-        return view("admin.isi.customer.index", compact('customer'));
+        $customers = User::all(); // Menggunakan model Customer dengan nama yang benar
+        return view("admin.isi.customer.index", compact('customers'));
+    }
+
+    public function cusindex()
+    {
+        return view('admin.isi.customer.index');
     }
 
     /**

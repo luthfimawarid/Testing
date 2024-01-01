@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mhsController;
 use App\Http\Controllers\pancongsController;
 use App\Http\Controllers\pancongs2Controller;
+use App\Http\Controllers\customerController;
 use App\Http\Controllers\MenusContoller;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\loginsController;
@@ -113,6 +114,7 @@ Route::resource('/order', adminController::class);
 Route::resource('/product', pancongsController::class);
 
 Route::get('/customers', [customerController::class, 'index'])->name('index');
+// Route::get('/customers', [customerController::class, 'cusindex'])->name('cusindex');
 // Route::resource('/product', pancongsController::class);
 
 Route::get('/tambahmenu', [pancongsController::class, 'indexTabel'])->name('indexTabel');
@@ -295,4 +297,6 @@ Route::get('/hipesadmin',function (){
 });
 
 Route::get('/tambahProduk', [ProdukController::class, 'index'])->name('index');
+Route::post('/logout', [RegisterController::class, 'logout'])->name('logout');
+
 
