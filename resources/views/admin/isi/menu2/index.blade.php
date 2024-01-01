@@ -3,7 +3,7 @@
 @section('content')
 
 <table class="table table-warning table-striped">
-  <h3>Menu 1 Rasa</h3>
+  <h3>Menu 2 Rasa</h3>
   <thead>
     <tr>
       <th scope="col">Id</th>
@@ -16,16 +16,16 @@
     </tr>
   </thead>
   <tbody>
-    @foreach($pancong as $pcg)
+    @foreach($pancong2 as $pcg2)
     <tr>
       <td>{{ $loop->index+1 }}</td>
-      <td>{{ $pcg->nama }}</td>
-      <td>{{ $pcg->harga }}</td>
-      <td>{{ $pcg->deskripsi }}</td>
-      <td><img src="{{ asset($pcg->photo) }}" alt="Photo" style="max-width: 100px;"></td>
-      <td><a href="{{ url ('pancongs/'.$pcg->id_menu. '/edit')}}" class="btn btn-primary">EDIT</a></td>
+      <td>{{ $pcg2->menu }}</td>
+      <td>{{ $pcg2->harga }}</td>
+      <td>{{ $pcg2->detail }}</td>
+      <td><img src="{{ asset($pcg2->foto) }}" alt="foto" style="max-width: 100px;"></td>
+      <td><a href="{{ url ('pancongs2/'.$pcg2->id. '/edit')}}" class="btn btn-primary">EDIT</a></td>
       <td>
-        <form action="{{ url ('pancongs/'.$pcg->id_menu)}}" method="post">
+        <form action="{{ url ('pancongs2/'.$pcg2->id)}}" method="post">
         @method('DELETE')
         @csrf
         <button type="submit" class="btn btn-danger">HAPUS</button>
@@ -37,7 +37,7 @@
 </table>
 
 
-<a href="pancongs/create" class="btn btn-outline-dark" >TAMBAH</a>
+<a href="pancongs2/create" class="btn btn-outline-dark" >TAMBAH</a>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
 @endsection

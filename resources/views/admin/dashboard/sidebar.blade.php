@@ -15,13 +15,19 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2 text-dark" aria-current="page" href="/pancongs">
+            <a class="nav-link d-flex align-items-center gap-2 text-dark" aria-current="page" href="/tambahmenu">
               <svg class="bi"><use xlink:href="#cart"/></svg>
-              Products
+              Products 1
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link d-flex align-items-center gap-2 text-dark" href="/admins">
+            <a class="nav-link d-flex align-items-center gap-2 text-dark" aria-current="page" href="/tambahmenu2">
+              <svg class="bi"><use xlink:href="#cart"/></svg>
+              Products 2
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-2 text-dark" href="#">
               <svg class="bi"><use xlink:href="#people"/></svg>
               Customers
             </a>

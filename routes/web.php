@@ -8,6 +8,7 @@ use App\Http\Controllers\pancongssController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mhsController;
 use App\Http\Controllers\pancongsController;
+use App\Http\Controllers\pancongs2Controller;
 use App\Http\Controllers\MenusContoller;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\loginsController;
@@ -111,7 +112,8 @@ Route::resource('/admins', adminController::class);
 Route::resource('/order', adminController::class);
 // Route::resource('/product', pancongsController::class);
 
-Route::get('/tambahmenu', [pancongsController::class, 'index'])->name('index');
+Route::get('/tambahmenu', [pancongsController::class, 'indexTabel'])->name('indexTabel');
+Route::get('/tambahmenu2', [pancongs2Controller::class, 'indexTabel'])->name('indexTabel');
 
 
 Route::get('/datamingguan', [DataMingguanController::class, 'index'])->name('index');
@@ -119,6 +121,10 @@ Route::get('/datamingguan', [DataMingguanController::class, 'index'])->name('ind
 Route::resource('/pancongs', pancongsController::class);
 Route::get('deskripsi/{id}', 'deskripsiController@index');
 Route::get('/menu1', [pancongsController::class,'index']);
+
+Route::resource('/pancongs2', pancongs2Controller::class);
+Route::get('deskripsi/{id}', 'deskripsiController@index');
+Route::get('/menu2', [pancongs2Controller::class,'index']);
 
 
 
@@ -159,12 +165,12 @@ Route::get('/deskripsimenu',function (){
 //     return view('rasa.home', compact('title','slug','rasa'));
 // });
 
-Route::get('/menu2',function (){
-    $title = "FlavourOfPamer";
-    $slug = "home";
-    $rasa = " ";
-    return view('rasa.menu2', compact('title','slug','rasa'));
-});
+// Route::get('/menu2',function (){
+//     $title = "FlavourOfPamer";
+//     $slug = "home";
+//     $rasa = " ";
+//     return view('rasa.menu2', compact('title','slug','rasa'));
+// });
 
 Route::get('/menu3',function (){
     $title = "FlavourOfPamer";
