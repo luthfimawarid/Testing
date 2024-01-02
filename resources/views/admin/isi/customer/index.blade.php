@@ -26,12 +26,12 @@
             <td>{{ $user->nomor_tlp }}</td>
             {{-- <td><a href="{{ url ('customer/'.$customer->id. '/edit')}}" class="btn btn-primary">EDIT</a></td> --}}
             <td>
-                <form action="{{ url ('customer/'.$user->id)}}" method="post">
-                    @method('DELETE')
-                    @csrf
-                    <button type="submit" class="btn btn-danger">HAPUS</button>
+                <form action="{{ url ('customers/'.$user->id)}}" method="post">
+                @method('DELETE')
+                @csrf
+                <button type="submit" class="btn btn-danger">HAPUS</button>
                 </form>
-            </td>
+              </td>
         </tr>
         @endforeach
     </tbody>

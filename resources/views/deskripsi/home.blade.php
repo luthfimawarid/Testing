@@ -1,4 +1,4 @@
-@extends('pamer.main2')
+@extends('pamer.main1')
 @section('title', $title)
 @section('stylesheets')
     <link rel="stylesheet" href="{{asset('css/pancong.css')}}">
@@ -20,8 +20,8 @@
                     <i class="bi bi-dot">Meises 2k</i>
                     <i class="bi bi-dot">Kacang 2k</i>
                     <!-- Update your buttons -->
-                    <button class="outline-btn" onclick="showToppingModal()">Masukkan Keranjang</button>
-                    <button class="outline-btn" onclick="showToppingModal()">Beli Sekarang</button>
+                    <button class="outline-btn" onclick="showToppingModal()">Topping</button>
+                    {{-- <button class="outline-btn" onclick="showToppingModal()">Beli Sekarang</button> --}}
                 </div>
             </div>
         </div>
@@ -68,8 +68,8 @@
 </div>
 
       <div class="potop modal-footer">
-        <a href="/keranjang" type="button" class="btn btn-primary" onclick="tambahKeKeranjang()">Matang</a>
-        <a href="/keranjang" type="button" class="btn btn-primary" onclick="tambahKeKeranjang()">Setengah Matang</a>
+        <a href="/pancongs/{id}" type="button" class="btn btn-primary" onclick="tambahKeKeranjang()">Kembali</a>
+        {{-- <a href="/keranjang" type="button" class="btn btn-primary" onclick="tambahKeKeranjang()">Setengah Matang</a> --}}
       </div>
     </div>
   </div>

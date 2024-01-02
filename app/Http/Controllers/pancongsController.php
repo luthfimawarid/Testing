@@ -50,15 +50,27 @@ class pancongsController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'foto' => 'image|mimes:png,jpg,jpeg|max:2048',
+        ]);
+    
+        if ($request->hasFile('foto')) {
+            $image = $request->file('foto');
+            $imageName = $image->getClientOriginalName();
+            $image->move(public_path('img'), $imageName);
+        }
+    
         $pancong = new pancongs();
-        $pancong->id_menu = $request->id_menu;
+        $pancong->id_menu = $request->id;
+        $pancong->foto = $imageName;
         $pancong->nama = $request->nama;
         $pancong->harga = $request->harga;
         $pancong->deskripsi = $request->deskripsi;
         $pancong->save();
-
+    
         return redirect('/tambahmenu');
     }
+    
 
     /**
      * Display the specified resource.
@@ -66,11 +78,21 @@ class pancongsController extends Controller
      * @param  int  $id_menu
      * @return \Illuminate\Http\Response
      */
-    public function show($id_menu)
-    {
-        //
-    }
-
+    
+     public function show($id_menu)
+     {
+        //  // Menggunakan model Pancong dan metode where untuk mencari data
+        //  $selectItem = pancongs::where('pancongs', $id_menu)->get();
+     
+        //  // Menangani jika data tidak ditemukan
+        //  if ($selectItem->isEmpty()) {
+        //      return redirect()->route('route_ke_index')->with('error', 'Data tidak ditemukan');
+        //  }
+     
+        //  // Mengirim data ke view 'deskripsi.home'
+        //  return view('deskripsi.home', compact('selectItem'));
+     }
+     
     /**
      * Show the form for editing the specified resource.
      *
@@ -93,11 +115,37 @@ class pancongsController extends Controller
     public function update(Request $request, $id_menu)
     {
         $pancong = pancongs::find($id_menu);
+    
+        $request->validate([
+            'foto' => 'image|mimes:png,jpg,jpeg|max:2048',
+        ]);
+    
+        if ($request->hasFile('foto')) {
+            // Hapus foto lama jika ada
+            if ($pancong->foto) {
+                $oldImagePath = public_path('img/' . $pancong->foto);
+                if (file_exists($oldImagePath)) {
+                    unlink($oldImagePath);
+                }
+            }
+    
+            // Simpan foto baru
+            $image = $request->file('foto');
+            $imageName = $image->getClientOriginalName();
+            $image->move(public_path('img'), $imageName);
+    
+            // Update kolom foto di database
+            $pancong->foto = $imageName;
+        }
+    
+        // Update kolom lainnya
         $pancong->nama = $request->nama;
         $pancong->harga = $request->harga;
         $pancong->deskripsi = $request->deskripsi;
+    
+        // Simpan perubahan
         $pancong->save();
-
+    
         return redirect('/tambahmenu');
     }
 

@@ -73,4 +73,18 @@ class RegisterController extends Controller
     return view('login.resetpassword');
    }
    
+   public function destroy($id)
+    {
+        // Cek apakah data dengan ID yang diberikan ada di database
+        $user = User::find($id);
+
+     if ($user) {
+        // Jika data ditemukan, hapus
+        $user->delete();
+        return redirect('/customers')->with('success', 'Data berhasil dihapus');
+     } else {
+        // Jika data tidak ditemukan, berikan pesan atau lakukan penanganan yang sesuai
+        return redirect('/customers')->with('error', 'Data tidak ditemukan');
+     }
+    }
 }
