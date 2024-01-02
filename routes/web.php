@@ -119,6 +119,7 @@ Route::resource('/product', pancongsController::class);
 
 Route::get('/customers', [customerController::class, 'index'])->name('index');
 Route::delete('/customers/{id}', [CustomerController::class, 'destroy'])->name('destroy');
+// Route::get('/customers', [customerController::class, 'cusindex'])->name('cusindex');
 // Route::resource('/product', pancongsController::class);
 
 Route::resource('/pancongs', pancongsController::class);
@@ -148,6 +149,8 @@ Route::get('/datamingguan', [DataMingguanController::class, 'index'])->name('ind
 
 Route::get('/register', [RegisterController::class, 'registerIndex'])->name('registerIndex');
 Route::post('/register', [RegisterController::class, 'registerPost'])->name('registerPost');
+Route::delete('/customers/{id}', 'RegisterController@destroy');
+
 Route::get('/login', [RegisterController::class, 'loginIndex'])->name('loginIndex');
 Route::get('/lomin', [RegisterController::class, 'lominIndex'])->name('lominIndex');
 Route::post('/login', [RegisterController::class, 'loginPost'])->name('loginPost');
@@ -302,5 +305,7 @@ Route::get('/hipesadmin',function (){
     $historyAdmin = " ";
     return view('admin.historyAdmin.home', compact('title','slug','historyAdmin'));
 });
+Route::get('/tambahProduk', [ProdukController::class, 'index'])->name('index');
+Route::post('/logout', [RegisterController::class, 'logout'])->name('logout');
 
 

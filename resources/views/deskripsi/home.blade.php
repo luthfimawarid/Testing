@@ -19,7 +19,8 @@
                     <i class="bi bi-dot">Keju 2k</i>
                     <i class="bi bi-dot">Meises 2k</i>
                     <i class="bi bi-dot">Kacang 2k</i>
-                    <button class="outline-btn" onclick="showToppingModal()">Topping</button>
+                    <button class="outline-btn">Matang</button>
+                    <button class="outline-btn">Setengah Matang</button>
                 </div>
             </div>
         </div>

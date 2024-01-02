@@ -46,16 +46,17 @@ cursor: pointer;
     color: black;
     content: '';
     display: block;
-    border-bottom: 0.1rem solid black;
+    border-bottom: 0.1rem solid #000000;
     transform: scale(0);
-    transition: 0.2s linear;
+    transform-origin: bottom left;
+    transition: 0.3s linear;
 }
 
 .person .side a:hover::after{
     text-decoration: none;
     color: black;
-    transform: scale(0.5);
-    border-bottom-width: 0.2rem; /* Atur ketebalan garis bawah saat dihover */
+    transform: scale(0.2);
+    border-bottom-width: 0.5rem; /* Atur ketebalan garis bawah saat dihover */
 }
 
 .person .side.active{

@@ -29,6 +29,8 @@ class RegisterController extends Controller
     $user = User::all();
         return view('login.home', compact('user'));
    }
+
+
    public function lominIndex()
    {
         return view('login.lomin');
@@ -52,8 +54,9 @@ class RegisterController extends Controller
         Auth::logout();
 
         $request->session()->invalidate();
+        $request->session()->regenerateToken();
 
-        return redirect('/user');
+        return view('home.home');
     }
 
    public function lominPost(Request $request) {
@@ -86,5 +89,5 @@ class RegisterController extends Controller
        return redirect('/customers')->with('error', 'Data tidak ditemukan');
     }
    }   
-   
+
 }
