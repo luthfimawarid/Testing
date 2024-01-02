@@ -6,21 +6,27 @@
 @section('content')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
     <div class="deskripsi">
-      @foreach ($pancong as $pcg)
+      @foreach ($selectItem as $pcg)
         <div class="container text-center">
             <div class="row">
                 <div class="col">
-                    <img src="img/Group 52.png" alt="Group 52">
+                    <img src="{{ asset('img/' . $pcg->foto) }}" alt="Group 52">
                 </div>
                 <div class="col text-start">
-                    <p>Chocolate chruncy</p>
-                    <i class="bi bi-dot">Oreo 2k</i>
-                    <i class="bi bi-dot">Milo 2k</i>
-                    <i class="bi bi-dot">Keju 2k</i>
-                    <i class="bi bi-dot">Meises 2k</i>
-                    <i class="bi bi-dot">Kacang 2k</i>
-                    <button class="outline-btn">Matang</button>
-                    <button class="outline-btn">Setengah Matang</button>
+                    <p>{{$pcg->nama}}</p>
+                    <p>{{$pcg->harga}}</p>
+
+                    <form action="{{ route('checkout',$pcg->id_menu)}}" method="POST">
+                      @csrf
+                    <input type="number" min="1" name="kuantitas" value="1">
+                    <select name="option" id="">
+                      <option value="matang">Matang</option>
+                      <option value="setmatang">Setengah Matang</option>
+                    </select>
+                    <button type="submit" class="btn btn-primary">CheckOut</button>
+                  </form>
+                    {{-- <button class="outline-btn">Matang</button>
+                    <button class="outline-btn">Setengah Matang</button> --}}
                 </div>
             </div>
         </div>

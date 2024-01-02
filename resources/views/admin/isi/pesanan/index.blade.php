@@ -5,25 +5,25 @@
 <table class="table table-warning table-striped">
   <thead>
     <tr>
-      <th scope="col">Id</th>
+      <th scope="col">Id_pesanan</th>
       <th scope="col">Username</th>
-      <th scope="col">Pesanan</th>
+      <th scope="col">Nama_menu</th>
+      <th scope="col">Kematangan</th>
       <th scope="col">Harga</th>
       <th scope="col">Jumlah</th>
-      <th scope="col">Total</th>
-      <th scope="col">Konfirmasi</th>
+      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
-    @foreach($admin as $adm)
+    @foreach($datapesanan as $adm)
     <tr>
-      <td>{{ $loop->index+1 }}</td>
-      <td>{{ $adm->nama }}</td>
-      <td>{{ $adm->pesanan }}</td>
-      <td>{{ $adm->harga }}</td>
-      <td>{{ $adm->jumlah }}</td>
-      <td>{{ $adm->total }}</td>
-      <td><input type="checkbox" class="konfirm"></td>
+      <td>{{ $adm->id_pesanan }}</td>
+      <td>{{ $adm->username }}</td>
+      <td>{{ $adm->nama_menu }}</td>
+      <td>{{ $adm->kematangan }}</td>
+      <td>{{ $adm->harga_produk }}</td>
+      <td>{{ $adm->kuantitas }}</td>
+      <td>{{ $adm->status }}</td>
     </tr>
     @endforeach
   </tbody>

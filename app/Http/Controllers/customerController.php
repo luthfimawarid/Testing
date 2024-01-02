@@ -15,9 +15,7 @@ class customerController extends Controller
     public function index()
     {
         $customer = User::all();
-        return view("admin.isi.customer.index", compact('customer'));
-        $customers = User::all(); // Menggunakan model Customer dengan nama yang benar
-        return view("admin.isi.customer.index", compact('customers'));
+        return view("admin.isi.customer.cus", compact('customer'));
     }
 
     public function cusindex()

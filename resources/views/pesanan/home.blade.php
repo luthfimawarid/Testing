@@ -1,28 +1,27 @@
 @extends('pamer.main1')
-@section('title', $title)
 @section('stylesheets')
     <link rel="stylesheet" href="{{asset('css/pesanan.css')}}">
 @endsection
 @section('content')
-    <h1>{{ $pesanan }}</h1>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
     <div class="pesanan shadow rounded" style="background-color: rgb(255, 239, 120)">
+     @foreach ($datapesanan as $item)
       <div class="row rounded" style="background-color: rgb(255, 228, 91);">
           <div class="col-md-2 p-3">
               <img src="/img/menu.png" alt="" width="100%" height="110px">
           </div>
           <div class="col-md mt-3">
-              <p><b>Coklat keju </b></p>
-              <p>Jumlah : 2</p>
-              <p>Dipesan oleh : <b>Luthfi Mawarid</b></p>
+              <p><b>{{$item->nama_menu}}</b></p>
+              <p>{{$item->kuantitas}}</p>
+              <p>{{$item->kematangan}}</p>
           </div>
           <div class="price col-md-3 mt-3">
-              <p>Harga :<b>20.000 x 2</b></p>
-              <p>Total :<b> 40.000</b></p>
-              <p><b><i>Pesanan sedang diproses</i></b></p>
+              <p><b>{{$item->harga_produk}}</b></p>
+              <p><b><i>{{$item->status}}</i></b></p>
           </div>
       </div>
-      <div class="row rounded mt-5" style="background-color: rgb(255, 228, 91);">
+      @endforeach
+      {{-- <div class="row rounded mt-5" style="background-color: rgb(255, 228, 91);">
           <div class="col-md-2 p-3">
               <img src="/img/menu.png" alt="" width="100%" height="110px">
           </div>
@@ -51,7 +50,7 @@
               <p>Total : <b>18.000</b></p>
               <p><b><i>Pesanan sedang diproses</i></b></p>
           </div>
-      </div>
+      </div> --}}
     </div>
       
 <script src="js/script.js"></script>

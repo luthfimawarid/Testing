@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DataMingguanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -11,11 +12,13 @@ use App\Http\Controllers\customerController;
 use App\Http\Controllers\pancongsController;
 use App\Http\Controllers\pancongs2Controller;
 use App\Http\Controllers\pancongs3Controller;
+use App\Http\Controllers\pesananUserController;
 use App\Http\Controllers\MenusContoller;
 use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\loginsController;
 use App\Http\Controllers\resetpasswordsController;
 use App\Http\Controllers\lominController;
+use App\Http\Controllers\pesananAdminController;
 use App\Http\Controllers\ProdukController;
 use PhpParser\Node\Stmt\Return_;
 
@@ -113,8 +116,8 @@ Route::get('/',function (){
 
 
 
-Route::resource('/admins', adminController::class);
-Route::resource('/order', adminController::class);
+// Route::resource('/admins', pesananAdminController::class,'index');
+Route::get('/order', [pesananAdminController::class,'index']);
 Route::resource('/product', pancongsController::class);
 
 Route::get('/customers', [customerController::class, 'index'])->name('index');
@@ -284,12 +287,7 @@ Route::get('/dashboard', function(){
 //     return view('admin.isi.index', compact('title', 'slug', 'dashboard'));
 // });
 
-Route::get('/checkout', function(){
-    $title = "FlavourOfPamer";
-    $slug = "dashboard";
-    $checkout = " ";
-    return view('checkOut.checkout', compact('title', 'slug', 'checkout'));
-});
+Route::get('/checkout', [CheckoutController::class,'']);
 
 Route::get('/harian', function(){
     $title = "FlavourOfPamer";
@@ -307,5 +305,8 @@ Route::get('/hipesadmin',function (){
 });
 Route::get('/tambahProduk', [ProdukController::class, 'index'])->name('index');
 Route::post('/logout', [RegisterController::class, 'logout'])->name('logout');
+Route::post('/pesan{id}', [CheckoutController::class, 'checkout'])->name('checkout');
+Route::get('/pesanan', [pesananUserController::class, 'index']);
+
 
 

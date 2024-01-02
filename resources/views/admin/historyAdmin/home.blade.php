@@ -11,9 +11,11 @@
 <table class="table table-warning table-striped">
     <thead>
       <tr>
-        <th scope="col">No.</th>
+        <th scope="col">Id</th>
         <th scope="col">Nama Pelanggan</th>
+        <th scope="col">Pesanan</th>
         <th scope="col">Tanggal Pesanan</th>
+        <th scope="col">Jumlah</th>
         <th scope="col">Total Harga</th>
         <th scope="col">Status</th>
       </tr>

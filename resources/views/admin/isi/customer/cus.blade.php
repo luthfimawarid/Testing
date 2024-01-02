@@ -22,7 +22,7 @@
         <td>{{ $user->alamat }}</td>
         <td>{{ $user->email }}</td>
         <td>{{ $user->nomor_tlp }}</td>
-        <td><a href="{{ url ('customer/'.$customer->id. '/edit')}}" class="btn btn-primary">EDIT</a></td>
+        <td><a href="{{ url ('customer/'.$user->id. '/edit')}}" class="btn btn-primary">EDIT</a></td>
         <td>
             <form action="{{ url ('customers/'.$user->id)}}" method="post">
             @method('DELETE')

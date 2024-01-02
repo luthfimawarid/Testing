@@ -46,7 +46,7 @@ class RegisterController extends Controller
         if (Auth::attempt($credetials)) {
             return redirect('/user')->with('success', 'Login berhasil');
         }
-        return back()->with('error', 'Email or Password salah');
+        return redirect('/dashboard');
    }
 
    public function logout(Request $request)
