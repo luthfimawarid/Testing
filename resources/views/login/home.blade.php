@@ -21,15 +21,18 @@
                     <label for="inputPassword" class="form-label mt-3">Password</label>
                     <input type="password" class="form-control" id="inputPassword" name="password" placeholder="masukan password anda">
                 </div>
-                <div class="lupas mt-1">
-                    <p>Lupa password?<a href="/resetpassword">Klik disini</a></p>
-                </div>
-                <div class="col-11 text-center">
-                    <button type="submit" class="btn btn-dark mt-5 mb-2">Masuk</button>
-                </div>
                 <div class="text-center ">
                     <p>Belum punya akun? <a href="/register">Daftar disini</a></p>
                 </div>
+                {{-- <div class="lupas mt-1">
+                    <p>Lupa password?<a href="/resetpassword">Klik disini</a></p>
+                </div> --}}
+                <div class="col-11 text-center">
+                    <button type="submit" class="btn btn-dark mt-5 mb-2">Masuk</button>
+                </div>
+                {{-- <div class="text-center ">
+                    <p>Belum punya akun? <a href="/register">Daftar disini</a></p>
+                </div> --}}
             @endsection
             </form>
         </div>
