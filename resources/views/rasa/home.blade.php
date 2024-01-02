@@ -30,7 +30,7 @@
       <div class="menubody">
         <p class="nama">{{$pcg->nama}}</p>
         <p class="harga">{{$pcg->harga}}</p>
-        <a href="/pancongs/{{$pcg->id_menu}}/" class="read">Readmore</a>
+        <a href="/pancongs/{{$pcg->id_menu}}" class="read">Readmore</a>
       </div>
     </div>
     @endforeach

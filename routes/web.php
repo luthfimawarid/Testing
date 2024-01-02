@@ -110,11 +110,15 @@ Route::get('/',function (){
 //     return view('admin.index');
 // });
 
+
+
+
 Route::resource('/admins', adminController::class);
 Route::resource('/order', adminController::class);
 Route::resource('/product', pancongsController::class);
 
 Route::get('/customers', [customerController::class, 'index'])->name('index');
+Route::delete('/customers/{id}', [CustomerController::class, 'destroy'])->name('destroy');
 // Route::resource('/product', pancongsController::class);
 
 Route::resource('/pancongs', pancongsController::class);
@@ -166,12 +170,7 @@ Route::get('/coba', function(){
 // Route::get('/deskripsimenu/{menu_id}', 'deskripsiController@show');
 
 
-Route::get('/deskripsimenu',function (){
-    $title = "FlavourOfPamer";
-    $slug = "home";
-    $deskripsi = " ";
-    return view('deskripsi.home', compact('title','slug','deskripsi'));
-});
+Route::get('/pancongs/{$id_menu}',[pancongsController::class,'show']);
 
 // Route::get('/menu1',function (){
     
@@ -304,5 +303,4 @@ Route::get('/hipesadmin',function (){
     return view('admin.historyAdmin.home', compact('title','slug','historyAdmin'));
 });
 
-Route::get('/tambahProduk', [ProdukController::class, 'index'])->name('index');
 

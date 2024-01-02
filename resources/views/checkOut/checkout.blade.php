@@ -1,4 +1,4 @@
-@extends('pamer.main2')
+@extends('pamer.main1')
 @section('title', $title)
 @section('stylesheets')
     <link rel="stylesheet" href="{{asset('css/checkout.css')}}">
@@ -71,12 +71,12 @@
         </form>
       </div>
       <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Billing address</h4>
+        {{-- <h4 class="mb-3">Billing address</h4> --}}
         <form class="needs-validation" novalidate>
           <div class="row g-3">
             <div class="col-sm-12">
-              <label for="namakamu" class="form-label">Nama Kamu</label>
-              <input type="text" class="form-control" id="namakamu" placeholder="Muntakhobil Fuad" value="" required>
+              <label for="namakamu" class="form-label">Nama Lengkap</label>
+              <input type="text" class="form-control" id="namakamu" placeholder="Masukkan nama anda" value="" required>
               <div class="invalid-feedback">
                 Silahkan isi varian rasa terlebih dahulu..
               </div>
@@ -84,39 +84,76 @@
 
 
             <div class="col-12">
-              <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
+              <label for="no hp" class="form-label"> No Hp</label>
+              <input type="text" class="form-control" id="email" placeholder="Masukkan no Hp anda" required>
               <div class="invalid-feedback">
                 Silahkan isi varian rasa terlebih dahulu.
               </div>
             </div>
 
             <div class="col-12">
-              <label for="vrasa" class="form-label">Varian Rasa</label>
-              <input type="text" class="form-control" id="vrasa" placeholder="coklat keju" required>
+              <label for="rasa" class="form-label">Varian Rasa</label>
+              <select class="form-select" id="rasa" required>
+                <option value="" selected disabled>Pilih rasa</option>
+                <!-- Tambahkan opsi 1 rasa sesuai kebutuhan -->
+                <option value="">---PAMER 1 RASA---</option>
+                <option value="original">Original</option>
+                <option value="cokelat">Cokelat</option>
+                <option value="strawberry">Strawberry</option>
+                <option value="green tea">Green Tea</option>
+                <option value="bluebrry">Blueberry</option>
+                <option value="vanilla">Vanilla</option>
+                <option value="greentea crunchy">Greentea Crunhcy</option>
+                <option value="cheese spread">Cheese Spread</option>
+                <option value="cokelat crunchy">Cokelat Crunhcy</option>
+                <option value="susu crunchy">Susu Crunhcy</option>
+                <option value="tiramisu crunchy">Tiramisu Crunhcy</option>
+                <!-- Tambahkan opsi 2 rasa sesuai kebutuhan -->
+                <option value="">---PAMER 2 RASA---</option>
+                <option value="susu+meses">Susu + Meses</option>
+                <option value="susu+keju">Susu + Keju</option>
+                <option value="strawberry+greentea">Strawberry + Greentea</option>
+                <option value="cokelat+strawberry">Cokelat + Strawberry</option>
+                <option value="cokelat+greentea">Cokelat + Greentea</option>
+                <option value="cokelat+meses">Cokelat + Meses</option>
+                <option value="cokelat+keju">Cokelat + Keju</option>
+                <option value="cokelat+kacang">Cokelat + Kacang</option>
+                <option value="cokelat+oreo">Cokelat + Oreo</option>
+                <option value="cokelat+redvelvet">Cokelat + Red Velvet</option>
+                <!-- Tambahkan opsi 3 rasa sesuai kebutuhan -->
+                <option value="">---PAMER 3 RASA---</option>
+                <option value="cokelat+keju+kacang">Cokelt + Keju + Kacang</option>
+                <option value="cokelat+oreo+keju">Cokelat + Oreo + Keju</option>
+                <option value="strawberry+keju+kacang">Strawberry + Keju + Kacang</option>
+                <option value="strawberry+oreo+keju">Strawberry + Oreo + Keju</option>
+                <option value="strawberry+keju+redvelvet">Strawberry + Keju + Red Velvet</option>
+                <option value="spesial+pancong+pelangi">Spesial Pancong Pelangi</option>
+              </select>
               <div class="invalid-feedback">
-                Silahkan isi varian rasa terlebih dahulu.
+                Silahkan pilih varian rasa terlebih dahulu.
               </div>
             </div>
 
             <div class="col-12">
-              <label for="address2" class="form-label">Address 2 <span class="text-body-secondary">(Optional)</span></label>
-              <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+              <label for="topping" class="form-label">Topping</label>
+              <select class="form-select" id="rasa" required>
+                <option value="" selected disabled>Pilih topping</option>
+                <!-- Tambahkan topping sesuai kebutuhan -->
+                <option value="susu">Susu</option>
+                <option value="meses">Meses</option>
+                <option value="oreo">Oreo</option>
+                <option value="redvelvet">Red Velvet</option>
+                <option value="kacang">Kacang</option>
+                <option value="keju">Keju</option>
+                <option value="chocochips">Choco Chips</option>
+                <option value="kacangalmond">Kacang Almond</option>
+              </select>
+
+            <div class="col-12">
+              <label for="address2" class="form-label">Alamat</label>
+              <input type="text" class="form-control" id="address2" placeholder="Masukkan alamat lengkap anda" required>
             </div>
             
-          <hr class="my-4">
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="same-address">
-            <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="save-info">
-            <label class="form-check-label" for="save-info">Save this information for next time</label>
-          </div>
-
-          <hr class="my-4">
 
           <h4 class="mb-3">Payment</h4>
 
@@ -148,12 +185,13 @@
             <div class="col-md-6">
               <label for="cc-number" class="form-label">Credit card number</label>
               <input type="text" class="form-control" id="cc-number" placeholder="" required>
+              <small class="text-body-secondary">Card number as displayed on card</small>
               <div class="invalid-feedback">
                 Credit card number is required
               </div>
             </div>
 
-            <div class="col-md-3">
+            {{-- <div class="col-md-3">
               <label for="cc-expiration" class="form-label">Expiration</label>
               <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
               <div class="invalid-feedback">
@@ -168,7 +206,7 @@
                 Security code required
               </div>
             </div>
-          </div>
+          </div> --}}
 
           <hr class="my-4">
 

@@ -49,6 +49,9 @@
                         <div class="kanan">
                             <a href="/login" id="loginLink">Login</a>
                         </div>
+                        <div class="kiri">
+                            <a href="/lomin" id="lominLink">Admin</a>
+                        </div>
                     </div>
                 </div>
             @endguest

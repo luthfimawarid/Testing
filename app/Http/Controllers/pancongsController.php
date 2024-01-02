@@ -81,16 +81,11 @@ class pancongsController extends Controller
     
      public function show($id_menu)
      {
-        //  // Menggunakan model Pancong dan metode where untuk mencari data
-        //  $selectItem = pancongs::where('pancongs', $id_menu)->get();
-     
-        //  // Menangani jika data tidak ditemukan
-        //  if ($selectItem->isEmpty()) {
-        //      return redirect()->route('route_ke_index')->with('error', 'Data tidak ditemukan');
-        //  }
-     
-        //  // Mengirim data ke view 'deskripsi.home'
-        //  return view('deskripsi.home', compact('selectItem'));
+        $pancong = pancongs::all();
+        $title = "FlavourOfPamer";
+        $slug = "home";
+        $selectItem = pancongs::where('id_menu', $id_menu)->get();
+        return view ('deskripsi.home', compact('selectItem'));
      }
      
     /**

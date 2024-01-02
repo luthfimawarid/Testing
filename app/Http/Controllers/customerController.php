@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\customer;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class customerController extends Controller
@@ -13,7 +14,7 @@ class customerController extends Controller
      */
     public function index()
     {
-        $customer = customer::all();
+        $customer = User::all();
         return view("admin.isi.customer.index", compact('customer'));
     }
 
@@ -102,9 +103,16 @@ class customerController extends Controller
      */
     public function destroy($id)
     {
-        $customer = customer::find($id);
-        $customer->delete();
+        // Cek apakah data dengan ID yang diberikan ada di database
+        $customer = User::find($id);
 
-        return redirect('/customer');
+     if ($customer) {
+        // Jika data ditemukan, hapus
+        $customer->delete();
+        return redirect('/customers')->with('success', 'Data berhasil dihapus');
+     } else {
+        // Jika data tidak ditemukan, berikan pesan atau lakukan penanganan yang sesuai
+        return redirect('/customers')->with('error', 'Data tidak ditemukan');
+     }
     }
 }
