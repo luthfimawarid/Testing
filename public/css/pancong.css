@@ -63,37 +63,61 @@ body{
     color: black;
 }
 
-.col p{
-    border-bottom: 3px solid #000; /* Warna dan ketebalan garis sesuaikan kebutuhan Anda */
-    display: block; /* Untuk memastikan garis hanya sepanjang teks */
-    padding-bottom: 5px; 
+.nama {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid #000;
     font-size: 1.5rem;
     font-weight: 700;
+    font-style: italic;
+    padding-bottom: 0.5px;
     width: 100%;
 }
 
-.bi-dot {
-    display: block;
-    margin-bottom: 10px; /* Sesuaikan dengan kebutuhan jarak yang diinginkan */
-    width: 100%;
-    font-weight: 600;
+.col h4 {
+    margin-top: 1.5rem;
+    font-size: 1.1rem;
 }
-.outline-btn {
-    margin-top: 2.5rem;
-    padding: 10px 20px;
-    border: 2px solid #000;
-    color: #000;
-    background-color: transparent;
+
+
+/* Style input number */
+input[type="number"] {
+    width: 150px;
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 15rem;
+}
+
+/* Style select */
+select {
+    margin-top: 15rem;
+    padding: 8px;
+    font-size: 1rem;
+}
+
+/* Style button */
+.btn {
+    /* margin-top: 5rem; */
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.5s ease, color 0.3s ease, border-color 0.3s ease;
-    border-radius: 7.5px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }
 
-.outline-btn.clicked {
-    background-color: #000;
-    color: rgb(255, 239, 132);
-    border-color: rgb(217, 255, 0);
+/* Style primary button */
+.btn-primary {
+    background-color: #3498db;
 }
+
+/* Hover effect for buttons */
+.btn:hover {
+    background-color: #2980b9;
+}
+
 
 footer{
     margin-top: 10rem;

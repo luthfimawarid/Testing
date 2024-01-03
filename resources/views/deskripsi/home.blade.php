@@ -1,7 +1,7 @@
 @extends('pamer.main1')
 {{-- @section('title', $title) --}}
 @section('stylesheets')
-    <link rel="stylesheet" href="{{asset('css/pancong.css')}}">
+    <link rel="stylesheet" href="{{asset('css/deskripsi.css')}}">
 @endsection
 @section('content')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
@@ -13,9 +13,11 @@
                     <img src="{{ asset('img/' . $pcg->foto) }}" alt="Group 52">
                 </div>
                 <div class="col text-start">
+                  <div class="nama">
                     <p>{{$pcg->nama}}</p>
                     <p>{{$pcg->harga}}</p>
-
+                  </div>
+                  <h4>{{$pcg->deskripsi}}</h4>
                     <form action="{{ route('checkout',$pcg->id_menu)}}" method="POST">
                       @csrf
                     <input type="number" min="1" name="kuantitas" value="1">

@@ -16,7 +16,6 @@
   <nav>
     @include('pamer.nav')
   </nav>
-
   <main>
     @yield('content')
   </main>
