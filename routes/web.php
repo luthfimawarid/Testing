@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\Checkout2Controller;
+use App\Http\Controllers\Checkout3Controller;
 use App\Http\Controllers\DataMingguanController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -18,6 +20,7 @@ use App\Http\Controllers\RegistrasiController;
 use App\Http\Controllers\loginsController;
 use App\Http\Controllers\resetpasswordsController;
 use App\Http\Controllers\lominController;
+use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\pesananAdminController;
 use App\Http\Controllers\ProdukController;
 use PhpParser\Node\Stmt\Return_;
@@ -118,6 +121,8 @@ Route::get('/',function (){
 
 // Route::resource('/admins', pesananAdminController::class,'index');
 Route::get('/order', [pesananAdminController::class,'index']);
+// Route::get('/order2', [pesananAdminController::class,'index2']);
+// Route::get('/order3', [pesananAdminController::class,'index3']);
 Route::resource('/product', pancongsController::class);
 
 Route::get('/customers', [customerController::class, 'index'])->name('index');
@@ -126,15 +131,15 @@ Route::delete('/customers/{id}', [CustomerController::class, 'destroy'])->name('
 // Route::resource('/product', pancongsController::class);
 
 Route::resource('/pancongs', pancongsController::class);
-Route::get('pancongs/{id}', [pancongsController::class, 'show']);
+// Route::get('pancongs/{id}', [pancongsController::class, 'show']);
 Route::get('/menu1', [pancongsController::class,'index']);
 
 Route::resource('/pancongs2', pancongs2Controller::class);
-Route::get('deskripsi/{id}', 'deskripsiController@index');
+// Route::get('deskripsi/{id}', 'deskripsiController@index');
 Route::get('/menu2', [pancongs2Controller::class,'index']);
 
 Route::resource('/pancongs3', pancongs3Controller::class);
-Route::get('deskripsi/{id}', 'deskripsiController@index');
+// Route::get('deskripsi/{id}', 'deskripsiController@index');
 Route::get('/menu3', [pancongs3Controller::class,'index']);
 
 
@@ -177,6 +182,8 @@ Route::get('/coba', function(){
 
 
 Route::get('/pancongs/{$id_menu}',[pancongsController::class,'show']);
+Route::get('/pancongs2/{$id_menu}',[pancongs2Controller::class,'show']);
+Route::get('/pancongs3/{$id_menu}',[pancongs3Controller::class,'show']);
 
 // Route::get('/menu1',function (){
     
@@ -251,12 +258,12 @@ Route::get('/history',function (){
     return view('hipes.home', compact('title','slug','history'));
 });
 
-Route::get('/pesanan',function (){
-    $title = "FlavourOfPamer";
-    $slug = "home";
-    $pesanan = " ";
-    return view('pesanan.home', compact('title','slug','pesanan'));
-});
+// Route::get('/pesanan',function (){
+//     $title = "FlavourOfPamer";
+//     $slug = "home";
+//     $pesanan = " ";
+//     return view('pesanan.home', compact('title','slug','pesanan'));
+// });
 
 Route::get('/about', function(){
     $title = "FlavourOfPamer";
@@ -287,7 +294,7 @@ Route::get('/dashboard', function(){
 //     return view('admin.isi.index', compact('title', 'slug', 'dashboard'));
 // });
 
-Route::get('/checkout', [CheckoutController::class,'']);
+// Route::get('/checkout', [CheckoutController::class,'']);
 
 Route::get('/harian', function(){
     $title = "FlavourOfPamer";
@@ -304,9 +311,25 @@ Route::get('/hipesadmin',function (){
     return view('admin.historyAdmin.home', compact('title','slug','historyAdmin'));
 });
 Route::get('/tambahProduk', [ProdukController::class, 'index'])->name('index');
-Route::post('/logout', [RegisterController::class, 'logout'])->name('logout');
+Route::post('/user/logout', [RegisterController::class, 'logout'])->name('logout');
 Route::post('/pesan{id}', [CheckoutController::class, 'checkout'])->name('checkout');
+Route::post('/pesan2/{id}', [CheckoutController::class,'checkout2'])->name('checkout2');
+Route::post('/pesan3/{id}', [CheckoutController::class, 'checkout3'])->name('checkout3');
 Route::get('/pesanan', [pesananUserController::class, 'index']);
+// Route::get('/pesanan2', [pesananUserController::class, 'index2']);
+// Route::get('/pesanan3', [pesananUserController::class, 'index3']);
+// routes/web.php
+Route::get('/admin/konfirmasi-pesanan/{id_pesanan}', [pesananAdminController::class,'konfirmasiPesanan'])->name('admin.konfirmasiPesanan');
+
+// Route::get('/notifications', [NotificationController::class, 'index']);
+// routes/web.php
+
+Route::group(['middleware' => 'auth.custom'], function () {
+    Route::get('/notifications', [NotificationController::class,'index'])->name('notifications.index');
+    Route::get('/notifications/{id}/mark-as-read', [NotificationController::class, 'markAsRead'])->name('notifications.markAsRead');
+});
+
+
 
 
 

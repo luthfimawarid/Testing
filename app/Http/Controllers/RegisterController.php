@@ -56,7 +56,7 @@ class RegisterController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return view('home.home');
+        return redirect('/user');
     }
 
    public function lominPost(Request $request) {
@@ -68,7 +68,7 @@ class RegisterController extends Controller
         if (Auth::attempt($credetials)) {
             return redirect('/dashboard')->with('success', 'Login berhasil');
         }
-        return back()->with('error', 'Email or Password salah');
+        return redirect('/dashboard');
    }
    public function change_password(){
     return view('login.resetpassword');

@@ -15,7 +15,7 @@
         <div class="header-text">
             <p class="text-over-shapes">Temukan <span>kelembutan</span> dan <span>kelezatan</span> autentik dari kue pancong</p>
             <p class="text-over-shapes1">Aroma dari kue pancong dan kelembutannya mengajak jiwa untuk memulai petualangan rasa dalam setiap suapan</p>
-            <a href="/checkout" class="btn btn-outline-dark">Beli Sekarang</a>
+            {{-- <a href="/checkout" class="btn btn-outline-dark">Beli Sekarang</a> --}}
         </div>
     </div>
 </div>

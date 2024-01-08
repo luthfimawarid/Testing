@@ -8,16 +8,16 @@
     <title>Edit data</title>
 </head>
 <body>
-<form action="{{ url('pancongs2/'.$pancong2->id) }}" method="post" enctype="multipart/form-data">
+<form action="{{ url('pancongs2/'.$pancong2->id_menu) }}" method="POST" enctype="multipart/form-data">
     @method('PATCH')
     @csrf
     <div class="mb-3">
         <label for="exampleinputid" class="form-label">Id</label>
-        <input type="text" class="form-control" id="exampleinputid" name="id" value="{{ $pancong2->id }}">
+        <input type="text" class="form-control" id="exampleinputid" name="id_menu" value="{{ $pancong2->id_menu }}">
     </div> 
     <div class="mb-3">
         <label for="exampleinputnama" class="form-label">Nama</label>
-        <input type="text" class="form-control" id="exampleinputnama" name="menu" value="{{ $pancong2->menu }}">
+        <input type="text" class="form-control" id="exampleinputnama" name="nama" value="{{ $pancong2->nama }}">
     </div>
     <div class="mb-3">
         <label for="exampleInputharga" class="form-label">Harga</label>
@@ -25,7 +25,7 @@
     </div>
     <div class="mb-3">
         <label for="exampleinputdeskripsi" class="form-label">Deskripsi</label>
-        <input type="text" class="form-control" id="exampleinputdeskripsi" name="detail" value="{{ $pancong2->detail }}">
+        <input type="text" class="form-control" id="exampleinputdeskripsi" name="deskripsi" value="{{ $pancong2->deskripsi }}">
     </div> 
     <div class="mb-3">
         <label for="exampleinputfoto" class="form-label">Foto</label>

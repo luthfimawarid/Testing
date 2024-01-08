@@ -9,5 +9,5 @@ class pancongs2 extends Model
 {
     use HasFactory;
     protected $table = 'pancongs2';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_menu';
 }

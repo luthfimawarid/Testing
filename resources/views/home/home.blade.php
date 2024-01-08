@@ -3,9 +3,14 @@
 @section('stylesheets')
     <link rel="stylesheet" href="{{asset('css/home.css')}}">
 @endsection
+<!-- Pesan Notifikasi -->
+@if(session('user_notification'))
+    <div class="alert alert-success">
+        {{ session('user_notification') }}
+    </div>
+@endif
+
 @section('content')
-    <h1>{{ $home }}</h1>
-<!-- konten1 start -->
 <div class="content-container">
     <div class="circle1"></div>
     <div class="circle2"></div>

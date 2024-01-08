@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg">
-    <img src="img/Ellipse 29.png" alt="" width="60px" height="60px" class="ms-5">
+    <img src="/img/Ellipse 29.png" alt="" width="60px" height="60px" class="ms-5">
     <div class="container-fluid justify-content-between">
         <a class="navbar-brand me-2 fst-italic" href="/user">FlavourOfPamer</a>
         <div class="d-flex">
@@ -30,7 +30,7 @@
             <p class="m-auto me-2">{{auth()->user()->name}}</p>
             <div class="person bi bi-person-circle" id="personIcon">
                 <div class="side">
-                    <form action="/" method="POST">
+                    <form action="/user/logout" method="POST">
                         @csrf
                         <button type="submit" class="logout">
                             <i class="bi bi-box-arrow-left"></i>
@@ -49,12 +49,19 @@
                         <div class="kanan">
                             <a href="/login" id="loginLink">Login</a>
                         </div>
-                        <div class="kiri">
+                        <div class="admin">
                             <a href="/lomin" id="lominLink">Admin</a>
                         </div>
                     </div>
                 </div>
             @endguest
+            <a class="bi bi-bell-fill fs-2 m-auto text-black position-relative" href="{{ route('notifications.index') }}">
+                @isset($unreadNotificationCount)
+                    @if($unreadNotificationCount > 0)
+                        <span class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">{{ $unreadNotificationCount }}</span>
+                    @endif
+                @endisset
+            </a>
         </div>
     </div>
 </nav>

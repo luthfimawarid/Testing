@@ -8,16 +8,16 @@
     <title>Edit data</title>
 </head>
 <body>
-<form action="{{ url('pancongs3/'.$pancong3->id) }}" method="post" enctype="multipart/form-data">
+<form action="{{ url('pancongs3/'.$pancong3->id_menu) }}" method="POST" enctype="multipart/form-data">
     @method('PATCH')
     @csrf
     <div class="mb-3">
         <label for="exampleinputid" class="form-label">Id</label>
-        <input type="text" class="form-control" id="exampleinputid" name="id" value="{{ $pancong3->id }}">
+        <input type="text" class="form-control" id="exampleinputid" name="id_menu" value="{{ $pancong3->id_menu }}">
     </div> 
     <div class="mb-3">
         <label for="exampleinputnama" class="form-label">Nama</label>
-        <input type="text" class="form-control" id="exampleinputnama" name="menu" value="{{ $pancong3->menu }}">
+        <input type="text" class="form-control" id="exampleinputnama" name="nama" value="{{ $pancong3->nama }}">
     </div>
     <div class="mb-3">
         <label for="exampleInputharga" class="form-label">Harga</label>

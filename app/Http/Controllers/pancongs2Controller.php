@@ -52,25 +52,43 @@ class pancongs2Controller extends Controller
         }
     
         $pancong2 = new pancongs2();
-        $pancong2->id = $request->id;
+        $pancong2->id_menu = $request->id;
         $pancong2->foto = $imageName;
-        $pancong2->menu = $request->menu;
+        $pancong2->nama = $request->nama;
         $pancong2->harga = $request->harga;
-        $pancong2->detail = $request->detail;
+        $pancong2->deskripsi = $request->deskripsi;
         $pancong2->save();
     
         return redirect('/tambahmenu2');
     }
-    
+
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id_menu
+     * @return \Illuminate\Http\Response
+     */
+
+    public function show($id_menu)
+     {
+        $pancong2 = pancongs2::all();
+        $title = "FlavourOfPamer";
+        $slug = "home";
+        $selectItem2 = pancongs2::where('id_menu', $id_menu)->get();
+        // dd($selectItem2);
+        return view ('deskripsi.rasa2', compact('selectItem2'));
+     }
      /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * 
+     * @param  int  $id_menu
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_menu)
     {
-        $pancong2 = pancongs2::find($id);
+        $pancong2 = pancongs2::find($id_menu);
         return view('admin.isi.menu2.edit', compact('pancong2'));
     }
 
@@ -78,12 +96,12 @@ class pancongs2Controller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $id_menu
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_menu)
     {
-        $pancong2 = pancongs2::find($id);
+        $pancong2 = pancongs2::find($id_menu);
     
         $request->validate([
             'foto' => 'image|mimes:png,jpg,jpeg|max:2048',
@@ -108,9 +126,9 @@ class pancongs2Controller extends Controller
         }
     
         // Update kolom lainnya
-        $pancong2->menu = $request->menu;
+        $pancong2->nama = $request->nama;
         $pancong2->harga = $request->harga;
-        $pancong2->detail = $request->detail;
+        $pancong2->deskripsi = $request->deskripsi;
     
         // Simpan perubahan
         $pancong2->save();
@@ -118,10 +136,10 @@ class pancongs2Controller extends Controller
         return redirect('/tambahmenu2');
     }
     
-    public function destroy($id)
+    public function destroy($id_menu)
     {
         // Cek apakah data dengan ID yang diberikan ada di database
-        $pancong2 = pancongs2::find($id);
+        $pancong2 = pancongs2::find($id_menu);
 
      if ($pancong2) {
         // Jika data ditemukan, hapus

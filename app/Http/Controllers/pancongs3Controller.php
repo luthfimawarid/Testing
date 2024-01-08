@@ -50,24 +50,41 @@ class pancongs3Controller extends Controller
         }
     
         $pancong3 = new pancongs3();
-        $pancong3->id = $request->id;
+        $pancong3->id_menu = $request->id;
         $pancong3->foto = $imageName;
-        $pancong3->menu = $request->menu;
+        $pancong3->nama = $request->nama;
         $pancong3->harga = $request->harga;
         $pancong3->deskripsi = $request->deskripsi;
         $pancong3->save();
     
         return redirect('/tambahmenu3');
     }
+
+      /**
+     * Display the specified resource.
+     *
+     * @param  int  $id_menu
+     * @return \Illuminate\Http\Response
+     */
+    
+     public function show($id_menu)
+     {
+        $pancong3 = pancongs3::all();
+        $title = "FlavourOfPamer";
+        $slug = "home";
+        $selectItem3 = pancongs3::where('id_menu', $id_menu)->get();
+        return view ('deskripsi.rasa3', compact('selectItem3'));
+     }
+
         /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $id_menu
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_menu)
     {
-        $pancong3 = pancongs3::find($id);
+        $pancong3 = pancongs3::find($id_menu);
         return view('admin.isi.menu3.edit', compact('pancong3'));
     }
 
@@ -75,12 +92,12 @@ class pancongs3Controller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $id_menu
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_menu)
     {
-        $pancong3 = pancongs3::find($id);
+        $pancong3 = pancongs3::find($id_menu);
     
         $request->validate([
             'foto' => 'image|mimes:png,jpg,jpeg|max:2048',
@@ -105,7 +122,7 @@ class pancongs3Controller extends Controller
         }
     
         // Update kolom lainnya
-        $pancong3->menu = $request->menu;
+        $pancong3->nama = $request->nama;
         $pancong3->harga = $request->harga;
         $pancong3->deskripsi = $request->deskripsi;
     
@@ -114,10 +131,10 @@ class pancongs3Controller extends Controller
     
         return redirect('/tambahmenu3');
     }
-    public function destroy($id)
+    public function destroy($id_menu)
     {
         // Cek apakah data dengan ID yang diberikan ada di database
-        $pancong3 = pancongs3::find($id);
+        $pancong3 = pancongs3::find($id_menu);
 
      if ($pancong3) {
         // Jika data ditemukan, hapus

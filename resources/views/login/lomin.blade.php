@@ -7,6 +7,7 @@
     <div class="bungkus justify-content-center">
         <div class="card-body">
             <form action="{{ route('lominIndex')}}" method="POST" class="row justify-content-center mt-2">
+                @csrf
                 <h3 class="login justify-content-center">Login Admin</h3>
                 <div class="col-11">
                     <label for="inputemail" class="form-label mt-3">Email</label>

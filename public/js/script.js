@@ -22,4 +22,19 @@ document.addEventListener('click', function(e){
     }
 });
 
+    document.addEventListener('DOMContentLoaded', function () {
+        var bellIcon = document.querySelector('.bi-bell-fill');
+
+        bellIcon.addEventListener('click', function () {
+            // Tandai notifikasi sebagai telah dibaca, jika diperlukan
+            // Anda dapat menggunakan AJAX untuk mengirim permintaan ke server
+            // dan memperbarui status notifikasi di sisi server.
+            // Contoh: kirim permintaan ke /notifications/mark-as-read
+
+            // Setelah notifikasi dibaca, Anda dapat menghapus atau menyembunyikan badge:
+            bellIcon.querySelector('.bg-danger').style.display = 'none';
+        });
+    });
+
+
 

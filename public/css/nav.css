@@ -29,16 +29,21 @@ cursor: pointer;
 
 .person .side{
     position: absolute;
-    display: flex;
-    justify-content: space-around;
+    /* display: flex;
+    justify-content: space-around; */
     right: -100%;
     background-color: rgb(251, 224, 105);
-    height: 15rem;
+    height: 10rem;
 }
 
 .person .side a{
     text-decoration: none;
     color: black;
+    /* background-color: rgb(251, 224, 105) ; */
+    /* border-radius: 10px; */
+    /* box-shadow: inset 0 0.2px 4px 0.1px black; */
+    margin-left: 2rem;
+    margin-top: 2rem;
 }
 
 .person .side a::after{
@@ -48,7 +53,7 @@ cursor: pointer;
     display: block;
     border-bottom: 0.1rem solid #000000;
     transform: scale(0);
-    transform-origin: bottom left;
+    transform-origin: left;
     transition: 0.3s linear;
 }
 
@@ -56,6 +61,7 @@ cursor: pointer;
     text-decoration: none;
     color: black;
     transform: scale(0.2);
+    margin-left: 2rem;
     border-bottom-width: 0.5rem; /* Atur ketebalan garis bawah saat dihover */
 }
 
@@ -76,13 +82,12 @@ cursor: pointer;
     display: flex;
     background-color: rgb(251, 224, 105);
     color: black;
-    box-shadow: 0 2px 2px 2px black;
+    /* box-shadow: 0 2px 2px 2px black; */
     padding: 2px 20px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    gap: 5
-    px; 
+    gap: 5px; 
 }
 
 

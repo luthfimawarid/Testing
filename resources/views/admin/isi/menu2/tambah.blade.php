@@ -8,11 +8,11 @@
     <title>Tambah data</title>
 </head>
 <body>
-<form action="{{ url('/pancongs2') }}" method="post" enctype="multipart/form-data">
+<form action="{{ url('/pancongs2') }}" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="mb-3">
         <label for="exampleinputnama" class="form-label">Nama</label>
-        <input type="text" class="form-control" id="exampleinputnama" name="menu">
+        <input type="text" class="form-control" id="exampleinputnama" name="nama">
     </div>
     <div class="mb-3">
         <label for="exampleInputharga" class="form-label">Harga</label>
@@ -20,7 +20,7 @@
     </div>
     <div class="mb-3">
         <label for="exampleinputdeskripsi" class="form-label">Deskripsi</label>
-        <input type="text" class="form-control" id="exampleinputdeskripsi" name="detail">
+        <input type="text" class="form-control" id="exampleinputdeskripsi" name="deskripsi">
     </div> 
     <div class="mb-3">
         <label for="exampleinputfoto" class="form-label">Foto</label>

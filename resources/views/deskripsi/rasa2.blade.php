@@ -6,21 +6,21 @@
 @section('content')
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
     <div class="deskripsi">
-      @foreach ($selectItem as $pcg)
+      @foreach ($selectItem2 as $pcg2)
         <div class="container text-center">
             <div class="row">
                 <div class="col">
-                    {{-- <img src="{{ asset('img/' . $pcg->foto) }}" alt="Group 52"> --}}
-                    <img src="{{ asset('/img/' . $item->foto) }}" alt="" width="100%" height="110px">
+                    {{-- <img src="{{ asset('img/' . $pcg2->foto) }}" alt="Group 52"> --}}
+                    <img src="{{ asset('/img/' . $pcg2->foto) }}" alt="" width="100%" height="110px">
 
                 </div>
                 <div class="col text-start">
                   <div class="nama">
-                    <p>{{$pcg->nama}}</p>
-                    <p>{{$pcg->harga}}</p>
+                    <p>{{$pcg2->nama}}</p>
+                    <p>{{$pcg2->harga}}</p>
                   </div>
-                  <h4>{{$pcg->deskripsi}}</h4>
-                    <form action="{{ route('checkout',$pcg->id_menu)}}" method="POST" enctype="multipart/form-data">
+                  <h4>{{$pcg2->deskripsi}}</h4>
+                    <form action="{{ route('checkout2',$pcg2->id_menu)}}" method="POST" enctype="multipart/form-data">
                       @csrf
                     <input type="number" min="1" name="kuantitas" value="1">
                     <select name="option" id="">
@@ -37,8 +37,9 @@
       @endforeach
     </div>
     <div class="bungkus4">
-      <a href="/pancongs" class="back">Kembali</a>
+      <a href="/pancongs2" class="back">Kembali</a>
     </div>
+
 
 @endsection
 

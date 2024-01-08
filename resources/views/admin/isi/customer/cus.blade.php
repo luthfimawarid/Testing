@@ -10,8 +10,8 @@
         <th scope="col">Alamat</th>
         <th scope="col">Email</th>
         <th scope="col">Nomor_Tlp</th>
-        <th scope="col">Edit</th>
-        <th scope="col">Hapus</th>
+        {{-- <th scope="col">Edit</th> --}}
+        {{-- <th scope="col">Hapus</th> --}}
     </tr>
 </thead>
 <tbody>
@@ -22,14 +22,14 @@
         <td>{{ $user->alamat }}</td>
         <td>{{ $user->email }}</td>
         <td>{{ $user->nomor_tlp }}</td>
-        <td><a href="{{ url ('customer/'.$user->id. '/edit')}}" class="btn btn-primary">EDIT</a></td>
-        <td>
+        {{-- <td><a href="{{ url ('customer/'.$user->id. '/edit')}}" class="btn btn-primary">EDIT</a></td> --}}
+        {{-- <td>
             <form action="{{ url ('customers/'.$user->id)}}" method="post">
             @method('DELETE')
             @csrf
             <button type="submit" class="btn btn-danger">HAPUS</button>
             </form>
-        </td>
+        </td> --}}
     </tr>
     @endforeach
 </tbody>
